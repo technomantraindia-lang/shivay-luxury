@@ -1,3 +1,34 @@
+/* ── Loading Screen Logic ────────────────────────────── */
+(function initLoader() {
+  const loader = document.getElementById("loader");
+  const loaderContent = document.getElementById("loader-content");
+  const pageWrapper = document.getElementById("page-wrapper");
+  if (!loader || !loaderContent || !pageWrapper) return;
+
+  // Prevent scroll while loading
+  document.body.style.overflow = "hidden";
+
+  // After 2.8s (letters & tagline finished animating in), start zoom
+  setTimeout(() => {
+    loaderContent.classList.add("is-zooming");
+    loader.classList.add("is-fading");
+
+    // Reveal the homepage scale-up slightly early (at 1.4s) so it connects seamlessly
+    setTimeout(() => {
+      pageWrapper.classList.remove("is-loading");
+      pageWrapper.classList.add("is-revealed");
+    }, 1400);
+
+    // Hide loader and restore overflow after zoom animation (2s) ends
+    loaderContent.addEventListener("animationend", (e) => {
+      if (e.animationName === "zoomIntoPortalGroup") {
+        loader.classList.add("is-hidden");
+        document.body.style.overflow = "";
+      }
+    });
+  }, 2800);
+})();
+
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const counters = document.querySelectorAll("[data-count]");
 const revealItems = document.querySelectorAll("[data-reveal], [data-reveal-collection]");

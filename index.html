@@ -6,10 +6,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shivaay Luxury Interiors</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+  <!-- ── Loading Screen ──────────────────────────────────────── -->
+  <div class="loader" id="loader">
+    <div class="loader__content" id="loader-content">
+      <svg class="loader__svg" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <mask id="loader-mask">
+            <!-- White shows the background color -->
+            <rect x="-500" y="-500" width="2000" height="1500" fill="white" />
+            <!-- Black cuts a hole in the background, revealing the homepage underneath -->
+            <text class="portal-text-mask" x="585" y="275" font-family="'Playfair Display', Georgia, serif" font-size="160" font-weight="700" font-style="italic" fill="black" text-anchor="middle">A</text>
+          </mask>
+        </defs>
+        
+        <g class="loader__zoom-group" id="loader-zoom-group">
+          <!-- The loader background rectangle, masked by our cutout -->
+          <rect class="loader__bg" x="-500" y="-500" width="2000" height="1500" fill="#3d352b" mask="url(#loader-mask)" />
+          
+          <!-- Remaining letters in the word -->
+          <text class="loader__text" y="275" font-family="'Playfair Display', Georgia, serif" font-size="160" font-weight="700" fill="#e8dcc8" text-anchor="middle">
+            <tspan x="180">S</tspan>
+            <tspan x="295">H</tspan>
+            <tspan x="385">I</tspan>
+            <tspan x="475">V</tspan>
+            <tspan x="700">A</tspan>
+            <tspan x="810">Y</tspan>
+          </text>
+          
+          <!-- Outline for the portal letter A to define its shape before zooming -->
+          <text class="loader__portal-outline" x="585" y="275" font-family="'Playfair Display', Georgia, serif" font-size="160" font-weight="700" font-style="italic" fill="none" stroke="#e8dcc8" stroke-width="3" text-anchor="middle">A</text>
+        </g>
+      </svg>
+      <span class="loader__tagline">Luxury Living</span>
+    </div>
+  </div>
+  <div class="page-wrapper is-loading" id="page-wrapper">
   <!-- ── Sidebar Drawer ─────────────────────────────────────── -->
   <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
   <aside class="sidebar" id="sidebar" aria-label="Navigation menu" aria-hidden="true">
@@ -990,6 +1028,7 @@
 
     </footer>
   </main>
+  </div><!-- /.page-wrapper -->
   <script src="script.js"></script>
 </body>
 
