@@ -262,3 +262,99 @@ if (reduceMotion) {
   initStorySlider();
   initServices();
 }
+
+// ─── ENQUIRY FORM ─────────────────────────────────────────────────────────────
+
+function initEnquiryForm() {
+  const form = document.getElementById("enquiry-form");
+  const successPanel = document.getElementById("enquiry-success");
+  const select = document.getElementById("enq-interest");
+
+  if (!form || !successPanel) return;
+
+  // Mark select as having a value so CSS can style it correctly
+  if (select) {
+    select.addEventListener("change", () => {
+      select.classList.toggle("has-value", select.value !== "");
+    });
+  }
+
+  // Validate a single field – returns true if valid
+  function validateField(field) {
+    const isEmpty = field.value.trim() === "";
+    const isEmailField = field.type === "email";
+    const isPhoneField = field.type === "tel";
+
+    let invalid = isEmpty;
+
+    if (!isEmpty && isEmailField) {
+      invalid = !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value.trim());
+    }
+
+    if (!isEmpty && isPhoneField) {
+      invalid = !/^[\d\s\+\-\(\)]{7,15}$/.test(field.value.trim());
+    }
+
+    field.classList.toggle("is-invalid", invalid);
+    return !invalid;
+  }
+
+  // Live validation: clear error once the user starts correcting a field
+  form.querySelectorAll("input, select, textarea").forEach((field) => {
+    field.addEventListener("input", () => {
+      if (field.classList.contains("is-invalid")) {
+        validateField(field);
+      }
+    });
+
+    field.addEventListener("blur", () => {
+      if (field.hasAttribute("required")) {
+        validateField(field);
+      }
+    });
+  });
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    // Validate all required fields
+    const requiredFields = form.querySelectorAll("[required]");
+    let allValid = true;
+
+    requiredFields.forEach((field) => {
+      if (!validateField(field)) {
+        allValid = false;
+      }
+    });
+
+    if (!allValid) {
+      // Scroll the first invalid field into view
+      const firstInvalid = form.querySelector(".is-invalid");
+      if (firstInvalid) {
+        firstInvalid.scrollIntoView({ behavior: "smooth", block: "center" });
+        firstInvalid.focus();
+      }
+      return;
+    }
+
+    // Disable submit while "sending"
+    const submitBtn = form.querySelector(".enquiry__submit");
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = "0.7";
+    }
+
+    // Simulate async send (replace with real fetch/API call as needed)
+    window.setTimeout(() => {
+      form.hidden = true;
+      successPanel.hidden = false;
+
+      // Scroll the success message into view
+      successPanel.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 800);
+  });
+}
+
+initEnquiryForm();
+
+// ─── END ENQUIRY FORM ─────────────────────────────────────────────────────────
