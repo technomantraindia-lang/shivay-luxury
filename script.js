@@ -413,3 +413,36 @@ function initEnquiryForm() {
 initEnquiryForm();
 
 // ─── END ENQUIRY FORM ─────────────────────────────────────────────────────────
+
+// ─── STORY IMAGE REVEAL ──────────────────────────────────────────────────────
+
+function initStoryImageReveal() {
+  if (reduceMotion) return;
+
+  const storyImage = document.querySelector('[data-reveal-story="zoom-out"]');
+  if (!storyImage) return;
+
+  if (!("IntersectionObserver" in window)) {
+    storyImage.classList.add("is-visible");
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.6 } // Triggers when 60% of the image is in the viewport
+  );
+
+  observer.observe(storyImage);
+}
+
+initStoryImageReveal();
+
+// ─── END STORY IMAGE REVEAL ──────────────────────────────────────────────────
+

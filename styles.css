@@ -56,9 +56,23 @@ img {
   transform: translate3d(0, 14px, 0);
 }
 
+[data-reveal-story="zoom-out"] {
+  opacity: 0;
+  transform: scale(1.18);
+  transition:
+    opacity 2800ms cubic-bezier(0.1, 0.9, 0.2, 1),
+    transform 2800ms cubic-bezier(0.1, 0.9, 0.2, 1);
+  will-change: transform, opacity;
+}
+
 [data-reveal].is-visible {
   opacity: 1;
   transform: translate3d(0, 0, 0);
+}
+
+[data-reveal-story="zoom-out"].is-visible {
+  opacity: 1;
+  transform: scale(1) translate3d(0, 0, 0);
 }
 
 a {
