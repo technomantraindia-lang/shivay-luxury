@@ -1,6 +1,6 @@
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const counters = document.querySelectorAll("[data-count]");
-const revealItems = document.querySelectorAll("[data-reveal]");
+const revealItems = document.querySelectorAll("[data-reveal], [data-reveal-collection]");
 const storySlider = document.querySelector("[data-story-slider]");
 const serviceSection = document.querySelector("#services");
 

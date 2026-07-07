@@ -265,7 +265,7 @@
     </section>
 
     <section class="services" id="services">
-      <div class="services__intro">
+      <div class="services__intro" data-reveal="left">
         <h2>
           <span>Curate, Design &amp;</span>
           <span>Elevate with</span>
@@ -277,7 +277,7 @@
           elevated by our expertise.
         </p>
         <nav class="services__menu" aria-label="Interior service categories">
-          <a class="is-active" href="#" data-service-tab="0">
+          <a class="is-active" href="#" data-service-tab="0" data-reveal="fade" style="--reveal-delay:100ms">
             <span class="services__icon" aria-hidden="true">
               <svg viewBox="0 0 48 48">
                 <path d="M15 25h18a5 5 0 0 1 5 5v8H10v-8a5 5 0 0 1 5-5Z" />
@@ -288,7 +288,7 @@
             </span>
             <span>Luxury Furniture</span>
           </a>
-          <a href="#" data-service-tab="1">
+          <a href="#" data-service-tab="1" data-reveal="fade" style="--reveal-delay:200ms">
             <span class="services__icon" aria-hidden="true">
               <svg viewBox="0 0 48 48">
                 <path d="M24 7v8" />
@@ -299,7 +299,7 @@
             </span>
             <span>Lighting Concepts</span>
           </a>
-          <a href="#" data-service-tab="2">
+          <a href="#" data-service-tab="2" data-reveal="fade" style="--reveal-delay:300ms">
             <span class="services__icon" aria-hidden="true">
               <svg viewBox="0 0 48 48">
                 <path d="M10 18l14-8 14 8-14 8-14-8Z" />
@@ -309,7 +309,7 @@
             </span>
             <span>Architectural Surfaces</span>
           </a>
-          <a href="#" data-service-tab="3">
+          <a href="#" data-service-tab="3" data-reveal="fade" style="--reveal-delay:400ms">
             <span class="services__icon" aria-hidden="true">
               <svg viewBox="0 0 48 48">
                 <path d="M10 10h11v11H10z" />
@@ -320,7 +320,7 @@
             </span>
             <span>Modular Solutions</span>
           </a>
-          <a href="#" data-service-tab="4">
+          <a href="#" data-service-tab="4" data-reveal="fade" style="--reveal-delay:500ms">
             <span class="services__icon" aria-hidden="true">
               <svg viewBox="0 0 48 48">
                 <path d="M12 14h24v25H12z" />
@@ -332,13 +332,13 @@
             <span>Art &amp; Decor</span>
           </a>
         </nav>
-        <a class="services__button" href="#listings">
+        <a class="services__button" href="#listings" data-reveal="fade" style="--reveal-delay:600ms">
           <span>Explore Projects</span>
           <span aria-hidden="true">&rarr;</span>
         </a>
       </div>
 
-      <div class="services__list">
+      <div class="services__list" data-reveal="right">
         <article class="service service--featured" data-service-feature>
           <img data-service-image src="assets/hero-luxury-interior.png" alt="Signature living concept" />
           <div class="service__overlay">
@@ -351,26 +351,26 @@
             <a href="#listings">View Project <span aria-hidden="true">&rarr;</span></a>
           </div>
         </article>
-        <article class="service is-open" data-service-accordion="0">
+        <article class="service is-open" data-service-accordion="0" data-reveal="fade" style="--reveal-delay:200ms">
           <span>02</span>
           <h3>Bespoke Space Planning</h3>
           <button type="button" aria-label="Open Bespoke Space Planning" aria-expanded="true">+</button>
           <p>We plan furniture flow, movement, proportions, and practical zones so every room feels effortless and
             refined.</p>
         </article>
-        <article class="service" data-service-accordion="1">
+        <article class="service" data-service-accordion="1" data-reveal="fade" style="--reveal-delay:350ms">
           <span>03</span>
           <h3>Curated Material Styling</h3>
           <button type="button" aria-label="Open Curated Material Styling" aria-expanded="false">+</button>
           <p>Surfaces, textures, finishes, and color palettes are selected to create a cohesive luxury language.</p>
         </article>
-        <article class="service" data-service-accordion="2">
+        <article class="service" data-service-accordion="2" data-reveal="fade" style="--reveal-delay:500ms">
           <span>04</span>
           <h3>Designer Lighting Integration</h3>
           <button type="button" aria-label="Open Designer Lighting Integration" aria-expanded="false">+</button>
           <p>Ambient, task, and accent lighting are layered to highlight materials and create calm atmosphere.</p>
         </article>
-        <article class="service" data-service-accordion="3">
+        <article class="service" data-service-accordion="3" data-reveal="fade" style="--reveal-delay:650ms">
           <span>05</span>
           <h3>Interior Detailing &amp; Decor</h3>
           <button type="button" aria-label="Open Interior Detailing and Decor" aria-expanded="false">+</button>
@@ -419,57 +419,57 @@
       </div>
 
       <div class="collections__grid">
-        <article>
+        <article data-reveal-collection="left">
           <img src="assets/about-dining.png" alt="Elegant chandelier collection" />
           <h3>Chandeliers</h3>
           <a href="#" aria-label="Open Chandeliers">&rarr;</a>
         </article>
-        <article>
+        <article data-reveal-collection="top">
           <img src="assets/hero-luxury-interior.png" alt="Luxury furniture collection" />
           <h3>Furniture</h3>
           <a href="#" aria-label="Open Furniture">&rarr;</a>
         </article>
-        <article>
+        <article data-reveal-collection="right">
           <img src="assets/hero-luxury-interior-close.png" alt="Outdoor furniture collection" />
           <h3>Outdoor Furniture</h3>
           <a href="#" aria-label="Open Outdoor Furniture">&rarr;</a>
         </article>
-        <article>
+        <article data-reveal-collection="bottom">
           <img src="assets/about-kitchen.png" alt="Texture paints collection" />
           <h3>Texture Paints</h3>
           <a href="#" aria-label="Open Texture Paints">&rarr;</a>
         </article>
-        <article>
+        <article data-reveal-collection="left">
           <img src="assets/about-kitchen.png" alt="Modular kitchen collection" />
           <h3>Modular Kitchen</h3>
           <a href="#" aria-label="Open Modular Kitchen">&rarr;</a>
         </article>
-        <article>
+        <article data-reveal-collection="top">
           <img src="assets/hero-luxury-interior-close.png" alt="Designer fans and kitchen appliances" />
           <h3>Designer Fans &amp;<br />Kitchen Appliances</h3>
           <a href="#" aria-label="Open Designer Fans and Kitchen Appliances">&rarr;</a>
         </article>
-        <article>
+        <article data-reveal-collection="right">
           <img src="assets/hero-luxury-interior.png" alt="Cement flooring and designer tiles" />
           <h3>Cement Flooring &amp;<br />Designer Tiles</h3>
           <a href="#" aria-label="Open Cement Flooring and Designer Tiles">&rarr;</a>
         </article>
-        <article>
+        <article data-reveal-collection="bottom">
           <img src="assets/about-dining.png" alt="3D wall stone and cladding" />
           <h3>3D Wall Stone &amp;<br />Cladding</h3>
           <a href="#" aria-label="Open 3D Wall Stone and Cladding">&rarr;</a>
         </article>
-        <article>
+        <article data-reveal-collection="left">
           <img src="assets/about-kitchen.png" alt="Sculptural art and decor" />
           <h3>Sculptural Art &amp; Decor</h3>
           <a href="#" aria-label="Open Sculptural Art and Decor">&rarr;</a>
         </article>
-        <article>
+        <article data-reveal-collection="top">
           <img src="assets/about-dining.png" alt="Planters collection" />
           <h3>Planters</h3>
           <a href="#" aria-label="Open Planters">&rarr;</a>
         </article>
-        <article>
+        <article data-reveal-collection="right">
           <img src="assets/hero-luxury-interior.png" alt="Wall arts collection" />
           <h3>Wall Arts</h3>
           <a href="#" aria-label="Open Wall Arts">&rarr;</a>
@@ -479,7 +479,7 @@
 
     <section class="trust">
       <div class="trust__dots" aria-hidden="true"></div>
-      <div class="trust__header">
+      <div class="trust__header" data-reveal="fade">
         <span>Why Architects Trust</span>
         <h2>Why Architects <span>Trust Shivaay</span></h2>
         <p>
@@ -490,7 +490,7 @@
       </div>
 
       <div class="trust__grid">
-        <article>
+        <article data-reveal-collection="left">
           <span class="trust__icon" aria-hidden="true"><svg viewBox="0 0 48 48">
               <path d="M16 8h16v7c0 7-4 13-8 15-4-2-8-8-8-15V8Z" />
               <path d="M16 12H9v3c0 5 3 9 8 10" />
@@ -501,7 +501,7 @@
           <h3>30+ Years<br />Industry Experience</h3>
           <p>Over three decades of expertise in understanding design intent and delivering with precision.</p>
         </article>
-        <article>
+        <article data-reveal-collection="top">
           <span class="trust__icon" aria-hidden="true"><svg viewBox="0 0 48 48">
               <circle cx="19" cy="18" r="7" />
               <circle cx="32" cy="20" r="6" />
@@ -511,7 +511,7 @@
           <h3>Dedicated<br />Design Liaison</h3>
           <p>A single point of contact who understands your vision and ensures seamless coordination.</p>
         </article>
-        <article>
+        <article data-reveal-collection="right">
           <span class="trust__icon" aria-hidden="true"><svg viewBox="0 0 48 48">
               <path d="M15 25h18a5 5 0 0 1 5 5v8H10v-8a5 5 0 0 1 5-5Z" />
               <path d="M14 25V14a5 5 0 0 1 5-5h10a5 5 0 0 1 5 5v11" />
@@ -521,7 +521,7 @@
           <h3>Premium<br />Product Curation</h3>
           <p>Thoughtfully curated collections that reflect global trends with timeless appeal and quality.</p>
         </article>
-        <article>
+        <article data-reveal-collection="bottom">
           <span class="trust__icon" aria-hidden="true"><svg viewBox="0 0 48 48">
               <path d="M8 24 24 10l16 14" />
               <path d="M13 22v20h22V22" />
@@ -530,7 +530,7 @@
           <h3>One-Roof<br />Sourcing</h3>
           <p>Everything you need under one roof saving time, simplifying decisions, and ensuring continuity.</p>
         </article>
-        <article>
+        <article data-reveal-collection="left">
           <span class="trust__icon" aria-hidden="true"><svg viewBox="0 0 48 48">
               <path d="M14 6h16l6 6v30H14z" />
               <path d="M30 6v8h8" />
@@ -541,7 +541,7 @@
           <h3>BOQ<br />Support</h3>
           <p>Accurate BOQs, competitive pricing, and value engineering to support your project goals.</p>
         </article>
-        <article>
+        <article data-reveal-collection="top">
           <span class="trust__icon" aria-hidden="true"><svg viewBox="0 0 48 48">
               <circle cx="24" cy="24" r="7" />
               <path d="M24 5v6" />
@@ -556,7 +556,7 @@
           <h3>Reliable Technical<br />Guidance</h3>
           <p>Expert advice on materials, performance, and installation to make informed decisions.</p>
         </article>
-        <article>
+        <article data-reveal-collection="right">
           <span class="trust__icon" aria-hidden="true"><svg viewBox="0 0 48 48">
               <path d="M24 6l3 10 10 3-10 3-3 10-3-10-10-3 10-3 3-10Z" />
               <path d="M37 28l2 6 6 2-6 2-2 6-2-6-6-2 6-2 2-6Z" />
@@ -564,7 +564,7 @@
           <h3>Luxury Finish<br />Understanding</h3>
           <p>A deep understanding of luxury finishes, detailing, and material combinations that elevate spaces.</p>
         </article>
-        <article>
+        <article data-reveal-collection="bottom">
           <span class="trust__icon" aria-hidden="true"><svg viewBox="0 0 48 48">
               <path d="M18 26 8 20l5-8 10 6" />
               <path d="M30 26l10-6-5-8-10 6" />
@@ -577,7 +577,7 @@
         </article>
       </div>
 
-      <p class="trust__tagline">Your vision. Our expertise. Timeless spaces, together.</p>
+      <p class="trust__tagline" data-reveal="fade">Your vision. Our expertise. Timeless spaces, together.</p>
     </section>
 
     <section class="process" id="process">
