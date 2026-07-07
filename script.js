@@ -266,9 +266,9 @@ if (reduceMotion) {
 // ─── SIDEBAR MENU ─────────────────────────────────────────────────────────────
 
 function initSidebar() {
-  const menuBtn  = document.querySelector('.nav__menu');
-  const sidebar  = document.getElementById('sidebar');
-  const overlay  = document.getElementById('sidebar-overlay');
+  const menuBtn = document.querySelector('.nav__menu');
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('sidebar-overlay');
   const closeBtn = document.getElementById('sidebar-close');
   const navLinks = sidebar ? sidebar.querySelectorAll('.sidebar__link') : [];
 
