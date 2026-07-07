@@ -1,0 +1,264 @@
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const counters = document.querySelectorAll("[data-count]");
+const revealItems = document.querySelectorAll("[data-reveal]");
+const storySlider = document.querySelector("[data-story-slider]");
+const serviceSection = document.querySelector("#services");
+
+const storySlides = [
+  {
+    image: "assets/hero-luxury-interior.png",
+    preview: "assets/about-kitchen.png",
+    title: "The Private Sanctuary",
+    eyebrow: "Signature Journey",
+    text: "A perfect balance of modern design and tranquil textures, shaped into an elegant space for everyday comfort.",
+    previewLabel: "Infinity View Concept",
+    alt: "Bright luxury living room interior with refined furniture",
+  },
+  {
+    image: "assets/hero-luxury-interior-close.png",
+    preview: "assets/about-dining.png",
+    title: "Warm Material Stories",
+    eyebrow: "Crafted Mood",
+    text: "Layered lighting, tactile timber, and soft silhouettes create a warm interior story with quiet luxury.",
+    previewLabel: "Candlelight Concept",
+    alt: "Warm candlelit luxury interior with wooden table",
+  },
+  {
+    image: "assets/about-kitchen.png",
+    preview: "assets/hero-luxury-interior.png",
+    title: "Collected Everyday Luxury",
+    eyebrow: "Modern Living",
+    text: "Practical spaces are refined through proportion, storage, surface detail, and an elevated material palette.",
+    previewLabel: "Kitchen Detail Concept",
+    alt: "Elegant kitchen with warm wood and cream cabinets",
+  },
+  {
+    image: "assets/about-dining.png",
+    preview: "assets/about-kitchen.png",
+    title: "Dining With Soft Rhythm",
+    eyebrow: "Interior Moments",
+    text: "Intimate corners are composed with sculptural furniture, calm tones, and details that feel personal.",
+    previewLabel: "Dining Nook Concept",
+    alt: "Premium dining space with warm lighting",
+  },
+];
+
+const serviceItems = [
+  {
+    number: "01",
+    image: "assets/hero-luxury-interior.png",
+    title: "Signature<br />Living Concepts",
+    description:
+      "Complete interior concepts that seamlessly blend elegance, comfort, and timeless sophistication.",
+    alt: "Signature luxury living concept with fireplace and refined furniture",
+  },
+  {
+    number: "02",
+    image: "assets/hero-luxury-interior-close.png",
+    title: "Lighting<br />Concepts",
+    description:
+      "Layered lighting plans that shape mood, highlight finishes, and bring warmth into every interior moment.",
+    alt: "Warm luxury interior detail with ambient lighting",
+  },
+  {
+    number: "03",
+    image: "assets/about-kitchen.png",
+    title: "Architectural<br />Surfaces",
+    description:
+      "Premium counters, panels, textures, and finishes curated for long-lasting elegance and daily use.",
+    alt: "Elegant kitchen surfaces with warm timber and cream cabinetry",
+  },
+  {
+    number: "04",
+    image: "assets/about-dining.png",
+    title: "Modular<br />Solutions",
+    description:
+      "Tailored storage, furniture systems, and modular layouts designed for Indian homes and modern lifestyles.",
+    alt: "Refined dining corner with curated furniture",
+  },
+  {
+    number: "05",
+    image: "assets/hero-luxury-interior.png",
+    title: "Art &<br />Decor",
+    description:
+      "Objects, art, styling, and final accents selected to give each space a personal, complete expression.",
+    alt: "Luxury living room with curated decor and artful details",
+  },
+];
+
+function animateCounter(counter) {
+  const target = Number(counter.dataset.count || 0);
+  const duration = 1400;
+  const start = performance.now();
+
+  function tick(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    counter.textContent = Math.round(target * eased).toString();
+
+    if (progress < 1) {
+      requestAnimationFrame(tick);
+    }
+  }
+
+  requestAnimationFrame(tick);
+}
+
+function showRevealItem(item) {
+  item.classList.add("is-visible");
+}
+
+function initStorySlider() {
+  if (!storySlider) return;
+
+  const image = storySlider.querySelector(".story__image");
+  const card = storySlider.querySelector(".feature-card");
+  const eyebrow = storySlider.querySelector(".story__eyebrow");
+  const title = storySlider.querySelector(".feature-card h3");
+  const text = storySlider.querySelector(".feature-card p");
+  const preview = storySlider.querySelector(".mini-card img");
+  const previewLabel = storySlider.querySelector(".mini-card span");
+  const dots = storySlider.querySelectorAll(".story__controls span");
+  const prev = storySlider.querySelector("[data-story-prev]");
+  const next = storySlider.querySelector("[data-story-next]");
+  let current = 0;
+  let locked = false;
+
+  function renderSlide(index) {
+    const slide = storySlides[index];
+
+    image.src = slide.image;
+    image.alt = slide.alt;
+    preview.src = slide.preview;
+    previewLabel.textContent = slide.previewLabel;
+    eyebrow.textContent = slide.eyebrow;
+    title.textContent = slide.title;
+    text.textContent = slide.text;
+
+    dots.forEach((dot, dotIndex) => {
+      dot.classList.toggle("is-active", dotIndex === index);
+    });
+  }
+
+  function goToSlide(nextIndex) {
+    if (locked) return;
+    locked = true;
+    current = (nextIndex + storySlides.length) % storySlides.length;
+    storySlider.classList.add("is-switching");
+    card.classList.add("is-changing");
+
+    window.setTimeout(() => {
+      renderSlide(current);
+      storySlider.classList.remove("is-switching");
+      storySlider.classList.add("is-settling");
+      card.classList.remove("is-changing");
+    }, 520);
+
+    window.setTimeout(() => {
+      storySlider.classList.remove("is-settling");
+      locked = false;
+    }, 1420);
+  }
+
+  prev.addEventListener("click", () => goToSlide(current - 1));
+  next.addEventListener("click", () => goToSlide(current + 1));
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => goToSlide(index));
+  });
+}
+
+function initServices() {
+  if (!serviceSection) return;
+
+  const tabs = serviceSection.querySelectorAll("[data-service-tab]");
+  const featured = serviceSection.querySelector("[data-service-feature]");
+  const image = serviceSection.querySelector("[data-service-image]");
+  const number = serviceSection.querySelector("[data-service-number]");
+  const title = serviceSection.querySelector("[data-service-title]");
+  const description = serviceSection.querySelector("[data-service-description]");
+  const accordions = serviceSection.querySelectorAll("[data-service-accordion]");
+
+  function setFeatured(index) {
+    const item = serviceItems[index];
+    if (!item || !featured) return;
+
+    featured.classList.add("is-changing");
+    window.setTimeout(() => {
+      image.src = item.image;
+      image.alt = item.alt;
+      number.textContent = item.number;
+      title.innerHTML = item.title;
+      description.textContent = item.description;
+      featured.classList.remove("is-changing");
+    }, 180);
+
+    tabs.forEach((tab, tabIndex) => {
+      tab.classList.toggle("is-active", tabIndex === index);
+    });
+  }
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", (event) => {
+      event.preventDefault();
+      setFeatured(index);
+    });
+  });
+
+  accordions.forEach((accordion) => {
+    const button = accordion.querySelector("button");
+    button.addEventListener("click", () => {
+      accordions.forEach((item) => {
+        const isCurrent = item === accordion;
+        item.classList.toggle("is-open", isCurrent);
+        item.querySelector("button").setAttribute("aria-expanded", String(isCurrent));
+      });
+    });
+  });
+}
+
+function watchRevealItems() {
+  if (!("IntersectionObserver" in window)) {
+    revealItems.forEach(showRevealItem);
+    counters.forEach(animateCounter);
+    return;
+  }
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        showRevealItem(entry.target);
+        revealObserver.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.18, rootMargin: "0px 0px -8% 0px" }
+  );
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+
+  const counterObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        animateCounter(entry.target);
+        counterObserver.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.45 }
+  );
+
+  counters.forEach((counter) => counterObserver.observe(counter));
+}
+
+if (reduceMotion) {
+  revealItems.forEach(showRevealItem);
+  counters.forEach((counter) => {
+    counter.textContent = counter.dataset.count || "0";
+  });
+  initStorySlider();
+  initServices();
+} else {
+  watchRevealItems();
+  initStorySlider();
+  initServices();
+}
