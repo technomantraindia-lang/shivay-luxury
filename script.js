@@ -263,6 +263,61 @@ if (reduceMotion) {
   initServices();
 }
 
+// ─── SIDEBAR MENU ─────────────────────────────────────────────────────────────
+
+function initSidebar() {
+  const menuBtn  = document.querySelector('.nav__menu');
+  const sidebar  = document.getElementById('sidebar');
+  const overlay  = document.getElementById('sidebar-overlay');
+  const closeBtn = document.getElementById('sidebar-close');
+  const navLinks = sidebar ? sidebar.querySelectorAll('.sidebar__link') : [];
+
+  if (!menuBtn || !sidebar || !overlay) return;
+
+  function openSidebar() {
+    sidebar.classList.add('is-open');
+    overlay.classList.add('is-open');
+    document.body.classList.add('sidebar-active');
+    sidebar.setAttribute('aria-hidden', 'false');
+    overlay.setAttribute('aria-hidden', 'false');
+    closeBtn && closeBtn.focus();
+  }
+
+  function closeSidebar() {
+    sidebar.classList.remove('is-open');
+    overlay.classList.remove('is-open');
+    document.body.classList.remove('sidebar-active');
+    sidebar.setAttribute('aria-hidden', 'true');
+    overlay.setAttribute('aria-hidden', 'true');
+    menuBtn.focus();
+  }
+
+  // Open on menu button click
+  menuBtn.addEventListener('click', openSidebar);
+
+  // Close on X button
+  closeBtn && closeBtn.addEventListener('click', closeSidebar);
+
+  // Close on overlay click
+  overlay.addEventListener('click', closeSidebar);
+
+  // Close on ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && sidebar.classList.contains('is-open')) {
+      closeSidebar();
+    }
+  });
+
+  // Close when a nav link is clicked (smooth scroll takes over)
+  navLinks.forEach((link) => {
+    link.addEventListener('click', closeSidebar);
+  });
+}
+
+initSidebar();
+
+// ─── END SIDEBAR MENU ─────────────────────────────────────────────────────────
+
 // ─── ENQUIRY FORM ─────────────────────────────────────────────────────────────
 
 function initEnquiryForm() {

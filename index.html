@@ -8,6 +8,64 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- ── Sidebar Drawer ─────────────────────────────────────── -->
+    <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
+    <aside class="sidebar" id="sidebar" aria-label="Navigation menu" aria-hidden="true">
+      <div class="sidebar__header">
+        <a class="sidebar__brand" href="#" aria-label="Shivaay home">
+          <img src="assets/home page/logo.png" alt="Shivaay Luxury Living LLP" />
+        </a>
+        <button class="sidebar__close" id="sidebar-close" type="button" aria-label="Close menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <nav class="sidebar__nav" aria-label="Main navigation">
+        <a class="sidebar__link" href="#">
+          <span class="sidebar__link-icon"><i class="fa-solid fa-house"></i></span>
+          <span>Home</span>
+        </a>
+        <a class="sidebar__link" href="#about">
+          <span class="sidebar__link-icon"><i class="fa-solid fa-circle-info"></i></span>
+          <span>About Us</span>
+        </a>
+        <a class="sidebar__link" href="#services">
+          <span class="sidebar__link-icon"><i class="fa-solid fa-layer-group"></i></span>
+          <span>Services</span>
+        </a>
+        <a class="sidebar__link" href="#collections">
+          <span class="sidebar__link-icon"><i class="fa-solid fa-grip"></i></span>
+          <span>Collections</span>
+        </a>
+        <a class="sidebar__link" href="#brands">
+          <span class="sidebar__link-icon"><i class="fa-solid fa-star"></i></span>
+          <span>Brands</span>
+        </a>
+        <a class="sidebar__link" href="#process">
+          <span class="sidebar__link-icon"><i class="fa-solid fa-arrow-trend-up"></i></span>
+          <span>Our Process</span>
+        </a>
+        <a class="sidebar__link" href="#contact">
+          <span class="sidebar__link-icon"><i class="fa-solid fa-location-dot"></i></span>
+          <span>Contact</span>
+        </a>
+      </nav>
+
+      <div class="sidebar__footer">
+        <p class="sidebar__tagline">Crafting Timeless Luxury Interiors</p>
+        <div class="sidebar__socials">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <a class="sidebar__cta" href="#contact">
+          <i class="fa-solid fa-phone"></i>
+          <span>Book a Consultation</span>
+        </a>
+      </div>
+    </aside>
+    <!-- ── End Sidebar ─────────────────────────────────────────── -->
+
     <main class="site-shell">
       <section class="hero" aria-label="Luxury interior design home">
         <img
@@ -29,8 +87,8 @@
             <img class="brand__logo" src="assets/home page/logo.png" alt="Shivaay Luxury Living LLP" />
           </a>
 
-          <a class="contact" href="#">
-            <span>Contact Us</span>
+          <a class="contact" href="#enquiry">
+            <span>Enquiry</span>
             <i aria-hidden="true">+</i>
           </a>
         </header>
