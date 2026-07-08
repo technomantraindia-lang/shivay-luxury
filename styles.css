@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --paper: #f4eee6;
   --paper-soft: #fbf7ef;
   --tile: #ece5dc;
@@ -34,7 +34,7 @@ img {
   overflow: hidden;
 }
 
-/* ── Loading Screen ─────────────────────────────────── */
+/* â”€â”€ Loading Screen â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .loader {
   position: fixed;
   inset: 0;
@@ -60,7 +60,7 @@ img {
   gap: 36px;
 }
 
-/* ── Word ── */
+/* â”€â”€ Word â”€â”€ */
 .loader__word {
   display: flex;
   font-family: 'Playfair Display', Georgia, serif;
@@ -71,7 +71,7 @@ img {
   letter-spacing: 0.06em;
 }
 
-/* ── Letters stagger in ── */
+/* â”€â”€ Letters stagger in â”€â”€ */
 .loader__letter {
   display: inline-block;
   opacity: 0;
@@ -89,7 +89,7 @@ img {
   to   { opacity: 1; transform: translateY(0);    }
 }
 
-/* ── Tagline ── */
+/* â”€â”€ Tagline â”€â”€ */
 .loader__tagline {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: clamp(0.65rem, 1.5vw, 1rem);
@@ -107,7 +107,7 @@ img {
   to   { opacity: 1; transform: translateY(0);   }
 }
 
-/* ── Is-zooming state ── */
+/* â”€â”€ Is-zooming state â”€â”€ */
 .loader__content.is-zooming .loader__letter--portal {
   animation: portalZoom 0.9s cubic-bezier(0.4, 0, 0.6, 1) forwards;
 }
@@ -131,7 +131,7 @@ img {
   to   { opacity: 0; transform: translateY(-6px); }
 }
 
-/* ── Loader overlay fade ── */
+/* â”€â”€ Loader overlay fade â”€â”€ */
 .loader.is-fading {
   animation: loaderFadeOut 0.4s ease 0.6s forwards;
 }
@@ -141,7 +141,7 @@ img {
   to   { opacity: 0; }
 }
 
-/* ── Page wrapper ── */
+/* â”€â”€ Page wrapper â”€â”€ */
 .page-wrapper {
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
@@ -2035,7 +2035,7 @@ p {
   text-decoration: none;
 }
 
-/* Old footer styles removed — replaced by new footer below */
+/* Old footer styles removed â€” replaced by new footer below */
 
 
 
@@ -2796,7 +2796,7 @@ p {
   }
 }
 
-/* ─── ENQUIRY SECTION ──────────────────────────────────────────────────────── */
+/* â”€â”€â”€ ENQUIRY SECTION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 /* Keyframes */
 @keyframes enq-shimmer {
@@ -2862,7 +2862,7 @@ p {
   box-shadow: 0 28px 80px rgba(87, 63, 39, 0.11);
 }
 
-/* ── Left column ─────────────────────────────────────────────────────────── */
+/* â”€â”€ Left column â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .enquiry__brand {
   display: flex;
@@ -3202,7 +3202,7 @@ p {
   color: #b28349;
 }
 
-/* ── Right column – Form card ─────────────────────────────────────────────── */
+/* â”€â”€ Right column â€“ Form card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .enquiry__form-card {
   padding: clamp(32px, 3.6vw, 54px);
@@ -3485,7 +3485,7 @@ p {
   max-width: 300px;
 }
 
-/* ── Responsive ───────────────────────────────────────────────────────────── */
+/* â”€â”€ Responsive â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 @media (max-width: 900px) {
   .enquiry {
@@ -3552,9 +3552,9 @@ p {
   }
 }
 
-/* ─── END ENQUIRY SECTION ───────────────────────────────────────────────────── */
+/* â”€â”€â”€ END ENQUIRY SECTION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
-/* ─── PROCESS SECTION ──────────────────────────────────────────────────────── */
+/* â”€â”€â”€ PROCESS SECTION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 @keyframes proc-sparkle {
 
@@ -3603,7 +3603,7 @@ p {
   box-shadow: 0 24px 64px rgba(87, 63, 39, 0.09);
 }
 
-/* ── Hero banner ─────────────────────────────────────────────────────────── */
+/* â”€â”€ Hero banner â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .process__hero {
   display: grid;
@@ -3700,7 +3700,7 @@ p {
   margin: 0;
 }
 
-/* ── Steps row ───────────────────────────────────────────────────────────── */
+/* â”€â”€ Steps row â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .process__steps {
   position: relative;
@@ -3864,7 +3864,7 @@ p {
   max-width: 148px;
 }
 
-/* ── Dark footer bar ─────────────────────────────────────────────────────── */
+/* â”€â”€ Dark footer bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .process__footer {
   display: grid;
@@ -3936,7 +3936,7 @@ p {
   animation-delay: 1s;
 }
 
-/* ── Responsive ──────────────────────────────────────────────────────────── */
+/* â”€â”€ Responsive â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 @media (max-width: 1100px) {
   .process__hero {
@@ -4072,9 +4072,9 @@ p {
   }
 }
 
-/* ─── END PROCESS SECTION ───────────────────────────────────────────────────── */
+/* â”€â”€â”€ END PROCESS SECTION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
-/* ─── NEW FOOTER ────────────────────────────────────────────────────────────── */
+/* â”€â”€â”€ NEW FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .footer {
   background: #1c1208;
@@ -4083,7 +4083,7 @@ p {
   margin-top: 0;
 }
 
-/* ── Ticker bar ─────────────────────────────────────────────────────────── */
+/* â”€â”€ Ticker bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .footer__ticker {
   display: flex;
@@ -4109,7 +4109,7 @@ p {
   opacity: 0.7;
 }
 
-/* ── Hero CTA row ────────────────────────────────────────────────────────── */
+/* â”€â”€ Hero CTA row â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .footer__hero {
   display: flex;
@@ -4174,7 +4174,7 @@ p {
   transform: translateX(5px);
 }
 
-/* ── Main 4-column grid ──────────────────────────────────────────────────── */
+/* â”€â”€ Main 4-column grid â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .footer__main {
   display: grid;
@@ -4353,7 +4353,7 @@ p {
   color: #ffffff;
 }
 
-/* ── Watermark row ───────────────────────────────────────────────────────── */
+/* â”€â”€ Watermark row â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .footer__watermark-row {
   position: relative;
@@ -4397,7 +4397,7 @@ p {
   right: clamp(24px, 6vw, 96px);
 }
 
-/* ── Bottom bar ──────────────────────────────────────────────────────────── */
+/* â”€â”€ Bottom bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .footer__bottom {
   display: flex;
@@ -4442,7 +4442,7 @@ p {
   color: #ffffff;
 }
 
-/* ── Responsive ──────────────────────────────────────────────────────────── */
+/* â”€â”€ Responsive â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 @media (max-width: 1100px) {
   .footer__main {
@@ -4514,9 +4514,9 @@ p {
   }
 }
 
-/* ─── END NEW FOOTER ─────────────────────────────────────────────────────────── */
+/* â”€â”€â”€ END NEW FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
-/* ─── BRANDS SECTION ────────────────────────────────────────────────────────── */
+/* â”€â”€â”€ BRANDS SECTION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .brands {
   display: grid;
@@ -4533,7 +4533,7 @@ p {
   box-shadow: 0 28px 80px rgba(87, 63, 39, 0.1);
 }
 
-/* ── Left column ─────────────────────────────────────────────────────────── */
+/* â”€â”€ Left column â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .brands__kicker {
   display: flex;
@@ -4656,7 +4656,7 @@ p {
   margin-top: 3px;
 }
 
-/* ── Right column – brand grid ───────────────────────────────────────────── */
+/* â”€â”€ Right column â€“ brand grid â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .brands__grid {
   display: grid;
@@ -4665,7 +4665,7 @@ p {
   gap: 14px;
 }
 
-/* Last row has 4 cards, first row 3 — first row spans evenly */
+/* Last row has 4 cards, first row 3 â€” first row spans evenly */
 .brands__grid .brands__card:nth-child(1),
 .brands__grid .brands__card:nth-child(2),
 .brands__grid .brands__card:nth-child(3) {
@@ -4807,7 +4807,7 @@ p {
   margin: 0;
 }
 
-/* ── Responsive ──────────────────────────────────────────────────────────── */
+/* â”€â”€ Responsive â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 @media (max-width: 1100px) {
   .brands {
@@ -4881,9 +4881,9 @@ p {
   }
 }
 
-/* ─── END BRANDS SECTION ─────────────────────────────────────────────────────── */
+/* â”€â”€â”€ END BRANDS SECTION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
-/* ─── SIDEBAR DRAWER ────────────────────────────────────────────────────────── */
+/* â”€â”€â”€ SIDEBAR DRAWER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .sidebar-overlay {
   position: fixed;
@@ -4925,7 +4925,7 @@ p {
   transform: translateX(0);
 }
 
-/* ── Header ── */
+/* â”€â”€ Header â”€â”€ */
 
 .sidebar__header {
   display: flex;
@@ -4971,7 +4971,7 @@ p {
   transform: rotate(90deg) scale(1.08);
 }
 
-/* ── Nav links ── */
+/* â”€â”€ Nav links â”€â”€ */
 
 .sidebar__nav {
   display: flex;
@@ -5024,7 +5024,7 @@ p {
   border-color: #c49a52;
 }
 
-/* ── Footer ── */
+/* â”€â”€ Footer â”€â”€ */
 
 .sidebar__footer {
   padding: 20px 24px 28px;
@@ -5145,9 +5145,9 @@ body.sidebar-active {
   overflow: hidden;
 }
 
-/* ─── END SIDEBAR DRAWER ─────────────────────────────────────────────────────── */
+/* â”€â”€â”€ END SIDEBAR DRAWER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
-/* ─── BRANDS2 SECTION (reference design) ───────────────────────────────────── */
+/* â”€â”€â”€ BRANDS2 SECTION (reference design) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .brands2 {
   display: grid;
@@ -5165,7 +5165,7 @@ body.sidebar-active {
   min-height: 540px;
 }
 
-/* ── Left column ── */
+/* â”€â”€ Left column â”€â”€ */
 .brands2__left {
   display: flex;
   flex-direction: column;
@@ -5310,7 +5310,7 @@ body.sidebar-active {
   filter: brightness(0.96) saturate(0.95);
 }
 
-/* ── Centre ornament column ── */
+/* â”€â”€ Centre ornament column â”€â”€ */
 .brands2__centre {
   position: relative;
   display: flex;
@@ -5371,7 +5371,7 @@ body.sidebar-active {
   line-height: 1.4;
 }
 
-/* ── Right brand cards ── */
+/* â”€â”€ Right brand cards â”€â”€ */
 .brands2__right {
   display: flex;
   flex-direction: column;
@@ -5567,7 +5567,7 @@ body.sidebar-active {
   background: linear-gradient(90deg, rgba(196, 154, 82, 0.6), transparent);
 }
 
-/* ── Responsive ── */
+/* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 1100px) {
   .brands2 {
     grid-template-columns: 1fr 80px 1.4fr;
@@ -5653,45 +5653,65 @@ body.sidebar-active {
   }
 }
 
-/* ─── END BRANDS2 SECTION ────────────────────────────────────────────────────── */
+/* â”€â”€â”€ END BRANDS2 SECTION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
-/* ─── PREMIUM BRANDS (pb) SECTION ──────────────────────────────────────────── */
+/* â”€â”€â”€ PREMIUM BRANDS (pb) SECTION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .pb {
-  margin: 0 clamp(28px, 4.8vw, 72px) 112px;
-  padding: clamp(52px, 5.5vw, 80px) clamp(44px, 5vw, 72px);
-  border-radius: 24px;
-  background:
-    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.92), transparent 38%),
-    linear-gradient(160deg, #fffaf2 0%, #f4eadb 100%);
-  border: 1px solid rgba(196, 154, 82, 0.2);
-  box-shadow: 0 24px 72px rgba(87, 63, 39, 0.1);
+  position: relative;
+  margin: clamp(48px, 5vw, 72px) clamp(28px, 4.8vw, 72px) clamp(64px, 6vw, 96px);
+  padding:
+    clamp(52px, 5.5vw, 76px)
+    clamp(44px, 5vw, 72px)
+    clamp(56px, 5.5vw, 80px);
+  border-radius: 28px;
+  background-color: #faf5ec;
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.96), transparent 42%),
+    linear-gradient(160deg, #fffdf9 0%, #f0e4d4 100%);
+  border: 1px solid rgba(178, 131, 73, 0.38);
+  box-shadow:
+    0 24px 64px rgba(87, 63, 39, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  overflow: hidden;
 }
 
-/* ── Header ── */
+/* â”€â”€ Header â”€â”€ */
 .pb__header {
   max-width: 680px;
-  margin: 0 auto clamp(44px, 5vw, 64px);
+  margin: 0 auto clamp(32px, 4vw, 48px);
   text-align: center;
 }
 
 .pb__kicker {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
   color: #b28349;
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+}
+
+.pb__kicker::before,
+.pb__kicker::after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: #b28349;
+  opacity: 0.5;
 }
 
 .pb__heading {
   color: #2f241d;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(32px, 4vw, 56px);
+  font-size: clamp(34px, 4vw, 58px);
   font-weight: 400;
   line-height: 1.1;
-  margin: 0 0 18px;
+  margin: 0 0 20px;
 }
 
 .pb__heading span {
@@ -5701,218 +5721,192 @@ body.sidebar-active {
 
 .pb__sub {
   color: #6f6255;
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 15.5px;
+  line-height: 1.75;
   margin: 0;
-  max-width: 560px;
+  max-width: 540px;
   margin-inline: auto;
 }
 
-/* ── Cards grid ── */
+/* â”€â”€ Grid: 3 top + 4 bottom â”€â”€ */
 .pb__grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 18px;
+  gap: 16px;
+  width: 100%;
 }
 
-.pb__grid .pb__card:nth-child(1) {
-  grid-column: 1 / 5;
+.pb__grid .pb__card:nth-child(-n+3) {
+  grid-column: span 4;
 }
 
-.pb__grid .pb__card:nth-child(2) {
-  grid-column: 5 / 9;
+.pb__grid .pb__card:nth-child(n+4) {
+  grid-column: span 3;
 }
 
-.pb__grid .pb__card:nth-child(3) {
-  grid-column: 9 / 13;
-}
+/* Top row â€” 3 cards span 4/3 each */
 
-.pb__grid .pb__card:nth-child(4) {
-  grid-column: 1 / 4;
-}
+/* Bottom row â€” 4 cards, one per column */
 
-.pb__grid .pb__card:nth-child(5) {
-  grid-column: 4 / 7;
-}
-
-.pb__grid .pb__card:nth-child(6) {
-  grid-column: 7 / 10;
-}
-
-.pb__grid .pb__card:nth-child(7) {
-  grid-column: 10 / 13;
-}
-
-/* ── Individual card ── */
+/* â”€â”€ Individual card â”€â”€ */
 .pb__card {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 28px 18px 22px;
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(196, 154, 82, 0.18);
-  border-radius: 16px;
-  box-shadow: 0 6px 22px rgba(87, 63, 39, 0.07);
-  transition: transform 260ms cubic-bezier(0.34, 1.56, 0.64, 1),
-    box-shadow 260ms ease,
-    border-color 260ms ease,
-    background-color 260ms ease;
-  cursor: default;
+  border-radius: 14px;
   overflow: hidden;
-  animation-delay: var(--d, 0ms);
-}
-
-.pb__card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: linear-gradient(145deg, rgba(255, 250, 240, 0.6) 0%, transparent 60%);
-  pointer-events: none;
+  width: 100%;
+  height: 195px;
+  cursor: default;
+  border: 1.5px solid rgba(196, 154, 82, 0.12);
+  box-shadow: 0 10px 32px rgba(30, 18, 8, 0.2);
+  transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 300ms ease,
+              border-color 300ms ease;
 }
 
 .pb__card:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 18px 42px rgba(87, 63, 39, 0.15);
-  border-color: rgba(196, 154, 82, 0.45);
-  background: #fffcf5;
+  transform: translateY(-5px);
+  border-color: rgba(196, 154, 82, 0.72);
+  box-shadow: 0 18px 48px rgba(30, 18, 8, 0.32);
 }
 
-.pb__card--gold {
-  background: linear-gradient(145deg, #fff8ec, #fdf0d5);
-  border-color: rgba(196, 154, 82, 0.42);
+/* â”€â”€ Full-bleed background image â”€â”€ */
+.pb__card-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 500ms ease;
+  display: block;
+  max-width: none;
 }
 
-.pb__card--gold:hover {
-  background: linear-gradient(145deg, #fffaef, #fdeec8);
-  border-color: #c49a52;
-  box-shadow: 0 18px 42px rgba(196, 154, 82, 0.2);
+.pb__card:hover .pb__card-bg {
+  transform: scale(1.07);
 }
 
-/* Icon wrap */
-.pb__card-icon-wrap {
-  display: grid;
-  place-items: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: rgba(196, 154, 82, 0.1);
-  border: 1.5px solid rgba(196, 154, 82, 0.28);
-  margin-bottom: 16px;
-  transition: background-color 260ms ease, border-color 260ms ease,
-    transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+/* â”€â”€ Number badge top-right â”€â”€ */
+.pb__card-num {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  z-index: 3;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
 }
 
-.pb__card:hover .pb__card-icon-wrap {
-  background: #b28349;
-  border-color: #b28349;
-  transform: scale(1.1) rotate(-6deg);
-}
-
-.pb__card-icon-wrap--gold {
-  background: rgba(196, 154, 82, 0.18);
-  border-color: rgba(196, 154, 82, 0.5);
-}
-
-.pb__card-icon {
-  font-size: 22px;
-  color: #b28349;
-  transition: color 260ms ease, transform 300ms ease;
-}
-
-.pb__card:hover .pb__card-icon {
-  color: #fff8ee;
-  transform: scale(1.08);
-}
-
-/* Card body */
-.pb__card-body {
+/* â”€â”€ Dark curved overlay at bottom â”€â”€ */
+.pb__card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  flex: 1;
+  justify-content: flex-end;
+}
+
+.pb__wave {
+  display: block;
+  width: 100%;
+  height: 26px;
+  margin-bottom: -1px;
+}
+
+.pb__card-body {
+  background: linear-gradient(180deg, #1c1208 0%, #140c06 100%);
+  padding: 2px 10px 10px;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.pb__card-icon-circle {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(12, 8, 4, 0.55);
+  border: 1.5px solid rgba(196, 154, 82, 0.8);
+  color: #c9a055;
+  transition: border-color 280ms ease, transform 280ms ease, background-color 280ms ease;
+}
+
+.pb__card-icon-circle svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.pb__card:hover .pb__card-icon-circle {
+  border-color: #d4af5a;
+  background: rgba(20, 12, 4, 0.85);
+  transform: scale(1.08);
+}
+.pb__card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
 }
 
 .pb__brand-name {
-  color: #2f241d;
+  color: #f5efe6;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 16px;
+  font-size: clamp(12px, 1.1vw, 15px);
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.12em;
   line-height: 1.1;
   margin: 0;
   text-transform: uppercase;
-  transition: color 240ms ease;
-}
-
-.pb__card:hover .pb__brand-name {
-  color: #b28349;
 }
 
 .pb__brand-name--italic {
   font-style: italic;
   text-transform: none;
-  font-size: 18px;
+  font-size: clamp(13px, 1.2vw, 17px);
   letter-spacing: 0.02em;
 }
 
 .pb__brand-sub {
   display: block;
-  color: #a0886e;
-  font-size: 9px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 7px;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  margin-top: 5px;
-  line-height: 1.4;
+  line-height: 1.5;
+  margin-top: 2px;
 }
 
-.pb__divider {
-  width: 28px;
-  height: 1.5px;
-  background: linear-gradient(90deg, transparent, #c49a52, transparent);
-  margin: 12px auto;
-  border-radius: 99px;
-  transition: width 260ms ease;
-}
-
-.pb__card:hover .pb__divider {
-  width: 44px;
+.pb__brand-sub--gold {
+  color: #c9a055;
 }
 
 .pb__cat {
   display: block;
-  color: #5a4a3a;
-  font-size: 12.5px;
-  font-weight: 500;
-  line-height: 1.45;
-}
-
-/* Number tag */
-.pb__tag {
-  position: absolute;
-  top: 12px;
-  right: 14px;
-  color: rgba(196, 154, 82, 0.35);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 11px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(9px, 0.85vw, 11px);
   font-weight: 400;
-  letter-spacing: 0.06em;
-  transition: color 240ms ease;
+  line-height: 1.3;
+  margin-top: 2px;
 }
 
-.pb__card:hover .pb__tag {
-  color: rgba(196, 154, 82, 0.65);
-}
-
-/* ── Footer tagline ── */
+/* â”€â”€ Footer tagline â”€â”€ */
 .pb__footer {
   display: flex;
   align-items: center;
   gap: 20px;
   margin-top: clamp(36px, 4vw, 52px);
+  padding-bottom: 8px;
 }
 
 .pb__footer-line {
@@ -5925,7 +5919,7 @@ body.sidebar-active {
   color: #b28349;
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   white-space: nowrap;
   display: flex;
@@ -5938,98 +5932,73 @@ body.sidebar-active {
   opacity: 0.7;
 }
 
-/* ── Responsive ── */
+/* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 1100px) {
-  .pb__grid .pb__card:nth-child(1) {
-    grid-column: 1 / 5;
+  .pb__grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 14px;
   }
 
-  .pb__grid .pb__card:nth-child(2) {
-    grid-column: 5 / 9;
+  .pb__grid .pb__card:nth-child(-n+3) {
+    grid-column: span 2;
   }
 
-  .pb__grid .pb__card:nth-child(3) {
-    grid-column: 9 / 13;
+  .pb__grid .pb__card:nth-child(n+4) {
+    grid-column: span 3;
   }
 
-  .pb__grid .pb__card:nth-child(4) {
-    grid-column: 1 / 4;
-  }
-
-  .pb__grid .pb__card:nth-child(5) {
-    grid-column: 4 / 7;
-  }
-
-  .pb__grid .pb__card:nth-child(6) {
-    grid-column: 7 / 10;
-  }
-
-  .pb__grid .pb__card:nth-child(7) {
-    grid-column: 10 / 13;
+  .pb__card {
+    height: 180px;
   }
 }
 
 @media (max-width: 900px) {
   .pb {
-    margin: 0 22px 84px;
-    padding: 40px 28px;
+    margin: 40px 22px 72px;
+    padding: 40px 24px 48px;
   }
 
   .pb__grid {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .pb__grid .pb__card:nth-child(1) {
-    grid-column: 1 / 3;
+  .pb__grid .pb__card:nth-child(-n+7) {
+    grid-column: span 1;
   }
 
-  .pb__grid .pb__card:nth-child(2) {
-    grid-column: 3 / 5;
-  }
-
-  .pb__grid .pb__card:nth-child(3) {
-    grid-column: 5 / 7;
-  }
-
-  .pb__grid .pb__card:nth-child(4) {
-    grid-column: 1 / 3;
-  }
-
-  .pb__grid .pb__card:nth-child(5) {
-    grid-column: 3 / 5;
-  }
-
-  .pb__grid .pb__card:nth-child(6) {
-    grid-column: 5 / 7;
-  }
-
-  .pb__grid .pb__card:nth-child(7) {
-    grid-column: 2 / 6;
+  .pb__card {
+    height: 175px;
   }
 }
 
 @media (max-width: 640px) {
   .pb {
-    margin: 0 14px 62px;
-    padding: 30px 16px;
-    border-radius: 16px;
+    margin: 32px 14px 56px;
+    padding: 28px 14px 40px;
+    border-radius: 18px;
   }
 
   .pb__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 12px;
   }
 
-  .pb__grid .pb__card:nth-child(n) {
+  .pb__grid .pb__card:nth-child(-n+7) {
     grid-column: span 1;
   }
 
-  .pb__grid .pb__card:nth-child(7) {
-    grid-column: 1 / 3;
+  .pb__card {
+    height: 170px;
   }
 
-  .pb__card {
-    padding: 20px 12px 16px;
+  .pb__card-icon-circle {
+    width: 34px;
+    height: 34px;
+  }
+
+  .pb__card-icon-circle svg {
+    width: 16px;
+    height: 16px;
   }
 
   .pb__footer-text {
@@ -6050,4 +6019,4 @@ body.sidebar-active {
   }
 }
 
-/* ─── END PREMIUM BRANDS SECTION ────────────────────────────────────────────── */
+/* â”€â”€â”€ END PREMIUM BRANDS SECTION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
