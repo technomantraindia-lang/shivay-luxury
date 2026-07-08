@@ -42,141 +42,122 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent;
+  background: #3d352b;
   overflow: hidden;
 }
 
 .loader.is-hidden {
   display: none;
+  pointer-events: none;
 }
 
 .loader__content {
   position: relative;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  will-change: transform;
+  gap: 36px;
 }
 
-.loader__svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.loader__zoom-group {
-  transform-origin: 585px 275px;
-  will-change: transform;
-}
-
-/* Stagger letters on load */
-.loader__text tspan {
-  opacity: 0;
-  transform: translateY(30px);
-  display: inline-block;
-  animation: svgLetterIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.loader__text tspan:nth-child(1) { animation-delay: 0.1s; }
-.loader__text tspan:nth-child(2) { animation-delay: 0.2s; }
-.loader__text tspan:nth-child(3) { animation-delay: 0.3s; }
-.loader__text tspan:nth-child(4) { animation-delay: 0.4s; }
-.loader__text tspan:nth-child(5) { animation-delay: 0.6s; }
-.loader__text tspan:nth-child(6) { animation-delay: 0.7s; }
-
-.loader__portal-outline {
-  opacity: 0;
-  animation: svgLetterIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
-  transition: stroke 0.4s ease;
-}
-
-@keyframes svgLetterIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.loader__tagline {
-  position: absolute;
-  bottom: 12%;
+/* ── Word ── */
+.loader__word {
+  display: flex;
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(0.75rem, 2vw, 1.15rem);
+  font-size: clamp(3.5rem, 12vw, 9rem);
+  font-weight: 700;
+  color: #e8dcc8;
+  line-height: 1;
+  letter-spacing: 0.06em;
+}
+
+/* ── Letters stagger in ── */
+.loader__letter {
+  display: inline-block;
+  opacity: 0;
+  animation: letterFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: calc(var(--i) * 0.09s);
+}
+
+.loader__letter--portal {
+  font-style: italic;
+  color: #c9b88a;
+}
+
+@keyframes letterFadeIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* ── Tagline ── */
+.loader__tagline {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(0.65rem, 1.5vw, 1rem);
   font-weight: 400;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.5em;
   text-transform: uppercase;
   color: #a8977e;
+  white-space: nowrap;
   opacity: 0;
-  animation: taglineReveal 1s ease 1s forwards;
-  pointer-events: none;
+  animation: taglineReveal 0.5s ease 0.7s forwards;
 }
 
-/* Fast tagline fade out when zoom starts */
+@keyframes taglineReveal {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0);   }
+}
+
+/* ── Is-zooming state ── */
+.loader__content.is-zooming .loader__letter--portal {
+  animation: portalZoom 0.9s cubic-bezier(0.4, 0, 0.6, 1) forwards;
+}
+
+.loader__content.is-zooming .loader__letter:not(.loader__letter--portal) {
+  animation: fadeOutQuick 0.2s ease forwards;
+}
+
 .loader__content.is-zooming .loader__tagline {
-  animation: fadeOutFast 0.4s ease forwards;
+  animation: fadeOutQuick 0.2s ease forwards;
 }
 
-@keyframes fadeOutFast {
-  to {
-    opacity: 0;
-    transform: translateY(-20px);
-    filter: blur(4px);
-  }
+@keyframes portalZoom {
+  0%   { transform: scale(1);  opacity: 1; }
+  70%  { transform: scale(15); opacity: 1; }
+  100% { transform: scale(25); opacity: 0; }
 }
 
-/* Start zooming */
-.loader__content.is-zooming .loader__zoom-group {
-  animation: zoomIntoPortalGroup 2s cubic-bezier(0.45, 0, 0.15, 1) forwards;
+@keyframes fadeOutQuick {
+  from { opacity: 1; }
+  to   { opacity: 0; transform: translateY(-6px); }
 }
 
-.loader__content.is-zooming .loader__portal-outline {
-  animation: portalOutlineFade 0.5s ease forwards;
-}
-
-@keyframes zoomIntoPortalGroup {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(65);
-  }
-}
-
-@keyframes portalOutlineFade {
-  to {
-    stroke: transparent;
-  }
-}
-
-/* Loader background fade-out near the end of zoom */
+/* ── Loader overlay fade ── */
 .loader.is-fading {
-  animation: loaderFadeOut 0.6s ease 1.4s forwards;
+  animation: loaderFadeOut 0.4s ease 0.6s forwards;
 }
 
 @keyframes loaderFadeOut {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
+  from { opacity: 1; }
+  to   { opacity: 0; }
 }
 
-/* Page wrapper — starts small, scales up */
+/* ── Page wrapper ── */
 .page-wrapper {
-  transition: transform 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .page-wrapper.is-loading {
-  transform: scale(0.95);
-  opacity: 1; /* Keep visible to show through the portal cutout mask! */
+  opacity: 0;
+  transform: scale(0.98);
   pointer-events: none;
 }
 
 .page-wrapper.is-revealed {
+  opacity: 1;
   transform: scale(1);
+}
+
+
 }
 
 [data-reveal] {

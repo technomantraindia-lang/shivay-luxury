@@ -16,34 +16,15 @@
   <!-- ── Loading Screen ──────────────────────────────────────── -->
   <div class="loader" id="loader">
     <div class="loader__content" id="loader-content">
-      <svg class="loader__svg" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid slice">
-        <defs>
-          <mask id="loader-mask">
-            <!-- White shows the background color -->
-            <rect x="-500" y="-500" width="2000" height="1500" fill="white" />
-            <!-- Black cuts a hole in the background, revealing the homepage underneath -->
-            <text class="portal-text-mask" x="585" y="275" font-family="'Playfair Display', Georgia, serif" font-size="160" font-weight="700" font-style="italic" fill="black" text-anchor="middle">A</text>
-          </mask>
-        </defs>
-        
-        <g class="loader__zoom-group" id="loader-zoom-group">
-          <!-- The loader background rectangle, masked by our cutout -->
-          <rect class="loader__bg" x="-500" y="-500" width="2000" height="1500" fill="#3d352b" mask="url(#loader-mask)" />
-          
-          <!-- Remaining letters in the word -->
-          <text class="loader__text" y="275" font-family="'Playfair Display', Georgia, serif" font-size="160" font-weight="700" fill="#e8dcc8" text-anchor="middle">
-            <tspan x="180">S</tspan>
-            <tspan x="295">H</tspan>
-            <tspan x="385">I</tspan>
-            <tspan x="475">V</tspan>
-            <tspan x="700">A</tspan>
-            <tspan x="810">Y</tspan>
-          </text>
-          
-          <!-- Outline for the portal letter A to define its shape before zooming -->
-          <text class="loader__portal-outline" x="585" y="275" font-family="'Playfair Display', Georgia, serif" font-size="160" font-weight="700" font-style="italic" fill="none" stroke="#e8dcc8" stroke-width="3" text-anchor="middle">A</text>
-        </g>
-      </svg>
+      <div class="loader__word" aria-hidden="true">
+        <span class="loader__letter" style="--i:0">S</span>
+        <span class="loader__letter" style="--i:1">H</span>
+        <span class="loader__letter" style="--i:2">I</span>
+        <span class="loader__letter" style="--i:3">V</span>
+        <span class="loader__letter loader__letter--portal" style="--i:4">A</span>
+        <span class="loader__letter" style="--i:5">A</span>
+        <span class="loader__letter" style="--i:6">Y</span>
+      </div>
       <span class="loader__tagline">Luxury Living</span>
     </div>
   </div>

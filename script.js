@@ -5,28 +5,25 @@
   const pageWrapper = document.getElementById("page-wrapper");
   if (!loader || !loaderContent || !pageWrapper) return;
 
-  // Prevent scroll while loading
   document.body.style.overflow = "hidden";
 
-  // After 2.8s (letters & tagline finished animating in), start zoom
+  // Letters finish at ~1.3s, tagline at 1.8s (1s delay + 0.8s animation)
+  // Wait just 300ms after tagline completes, then zoom
   setTimeout(() => {
+    // Start zoom + reveal page + fade loader (all synchronized)
     loaderContent.classList.add("is-zooming");
     loader.classList.add("is-fading");
+    
+    pageWrapper.classList.remove("is-loading");
+    pageWrapper.classList.add("is-revealed");
 
-    // Reveal the homepage scale-up slightly early (at 1.4s) so it connects seamlessly
+    // Cleanup after loader fade completes (zoom 1s + fade delay 0.7s + fade 0.45s)
     setTimeout(() => {
-      pageWrapper.classList.remove("is-loading");
-      pageWrapper.classList.add("is-revealed");
-    }, 1400);
+      loader.classList.add("is-hidden");
+      document.body.style.overflow = "";
+    }, 1300);
 
-    // Hide loader and restore overflow after zoom animation (2s) ends
-    loaderContent.addEventListener("animationend", (e) => {
-      if (e.animationName === "zoomIntoPortalGroup") {
-        loader.classList.add("is-hidden");
-        document.body.style.overflow = "";
-      }
-    });
-  }, 2800);
+  }, 1500); // Letters + tagline done by ~1.8s, starting at 1.5s gives overlap for flow
 })();
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
