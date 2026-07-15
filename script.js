@@ -442,6 +442,79 @@ initEnquiryForm();
 
 // ─── END ENQUIRY FORM ─────────────────────────────────────────────────────────
 
+// ─── ENQUIRY POPUP ────────────────────────────────────────────────────────────
+
+function initEnquiryPopup() {
+  const popup = document.getElementById("enquiry-popup");
+  if (!popup) return;
+
+  const openButtons = document.querySelectorAll("[data-enquiry-open]");
+  const closeButtons = popup.querySelectorAll("[data-enquiry-close]");
+  const dialog = popup.querySelector(".enquiry-popup__dialog");
+  const form = popup.querySelector(".enquiry-popup__form");
+  const firstField = popup.querySelector("input, select, textarea, button");
+  let previousFocus = null;
+
+  function openPopup(event) {
+    if (event) event.preventDefault();
+    previousFocus = document.activeElement;
+    popup.classList.add("is-open");
+    popup.setAttribute("aria-hidden", "false");
+    document.body.classList.add("enquiry-popup-active");
+    window.setTimeout(() => firstField && firstField.focus(), 80);
+  }
+
+  function closePopup() {
+    popup.classList.remove("is-open");
+    popup.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("enquiry-popup-active");
+    if (previousFocus && typeof previousFocus.focus === "function") {
+      previousFocus.focus();
+    }
+  }
+
+  openButtons.forEach((button) => {
+    button.addEventListener("click", openPopup);
+  });
+
+  closeButtons.forEach((button) => {
+    button.addEventListener("click", closePopup);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && popup.classList.contains("is-open")) {
+      closePopup();
+    }
+  });
+
+  if (dialog) {
+    dialog.addEventListener("click", (event) => {
+      event.stopPropagation();
+    });
+  }
+
+  if (form) {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const submit = form.querySelector(".enquiry-popup__submit");
+      if (!submit) return;
+
+      submit.innerHTML = 'Enquiry Sent <i class="fa-solid fa-check"></i>';
+      submit.disabled = true;
+      window.setTimeout(() => {
+        submit.innerHTML = 'Send Enquiry <i class="fa-solid fa-arrow-right"></i>';
+        submit.disabled = false;
+        form.reset();
+        closePopup();
+      }, 1200);
+    });
+  }
+}
+
+initEnquiryPopup();
+
+// ─── END ENQUIRY POPUP ────────────────────────────────────────────────────────
+
 // ─── STORY IMAGE REVEAL ──────────────────────────────────────────────────────
 
 function initStoryImageReveal() {
@@ -473,4 +546,3 @@ function initStoryImageReveal() {
 initStoryImageReveal();
 
 // ─── END STORY IMAGE REVEAL ──────────────────────────────────────────────────
-

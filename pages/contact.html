@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Shivaay Luxury Interiors</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="about-page contact-page">
+  <div class="loader" id="loader">
+    <div class="loader__content" id="loader-content">
+      <div class="loader__word" aria-hidden="true">
+        <span class="loader__letter" style="--i:0">S</span>
+        <span class="loader__letter" style="--i:1">H</span>
+        <span class="loader__letter" style="--i:2">I</span>
+        <span class="loader__letter" style="--i:3">V</span>
+        <span class="loader__letter loader__letter--portal" style="--i:4">A</span>
+        <span class="loader__letter" style="--i:5">A</span>
+        <span class="loader__letter" style="--i:6">Y</span>
+      </div>
+      <span class="loader__tagline">Luxury Living</span>
+    </div>
+  </div>
+
+  <div class="page-wrapper is-loading" id="page-wrapper">
+    <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
+    <aside class="sidebar" id="sidebar" aria-label="Navigation menu" aria-hidden="true">
+      <div class="sidebar__header">
+        <a class="sidebar__brand" href="../index.html" aria-label="Shivaay home">
+          <img src="../assets/home page/logo.png" alt="Shivaay Luxury Living LLP" />
+        </a>
+        <button class="sidebar__close" id="sidebar-close" type="button" aria-label="Close menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <nav class="sidebar__nav" aria-label="Main navigation">
+        <a class="sidebar__link" href="../index.html">
+          <span class="sidebar__link-icon"><i class="fa-solid fa-house"></i></span>
+          <span>Home</span>
+        </a>
+        <a class="sidebar__link" href="about.html">
+          <span class="sidebar__link-icon"><i class="fa-solid fa-circle-info"></i></span>
+          <span>About Us</span>
+        </a>
+        <a class="sidebar__link" href="collections.html">
+          <span class="sidebar__link-icon"><i class="fa-solid fa-grip"></i></span>
+          <span>Collections</span>
+        </a>
+        <a class="sidebar__link" href="gallery.html">
+          <span class="sidebar__link-icon"><i class="fa-solid fa-images"></i></span>
+          <span>Gallery</span>
+        </a>
+        <a class="sidebar__link" href="brands.html">
+          <span class="sidebar__link-icon"><i class="fa-solid fa-star"></i></span>
+          <span>Our Brands</span>
+        </a>
+        <a class="sidebar__link" href="contact.html">
+          <span class="sidebar__link-icon"><i class="fa-solid fa-location-dot"></i></span>
+          <span>Contact</span>
+        </a>
+      </nav>
+
+      <div class="sidebar__footer">
+        <p class="sidebar__tagline">Crafting Timeless Luxury Interiors</p>
+        <div class="sidebar__socials">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <a class="sidebar__cta" href="#contact-details">
+          <i class="fa-solid fa-phone"></i>
+          <span>Book a Consultation</span>
+        </a>
+      </div>
+    </aside>
+
+    <main class="site-shell">
+      <section class="hero hero--banner hero--about-banner" aria-label="Contact Shivaay Luxury Living">
+        <img class="hero__image" src="../assets/hero-luxury-interior-close.png"
+          alt="Warm luxury interior detail with premium decor" />
+        <div class="hero__shade"></div>
+
+        <header class="nav" aria-label="Primary navigation">
+          <button class="nav__menu" type="button" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <b>Menu</b>
+          </button>
+
+          <a class="brand" href="../index.html" aria-label="Shivaay home">
+            <img class="brand__logo" src="../assets/home page/logo.png" alt="Shivaay Luxury Living LLP" />
+          </a>
+
+          <a class="contact" href="#enquiry-popup" data-enquiry-open>
+            <span>Enquiry</span>
+            <i aria-hidden="true">+</i>
+          </a>
+        </header>
+
+        <div class="about-banner__frame" aria-hidden="true"></div>
+
+        <div class="hero__content hero__content--banner about-banner__content">
+          <h1>Contact Us</h1>
+        </div>
+
+        <a class="scroll-cue" href="#contact-details" aria-label="Scroll to contact"></a>
+      </section>
+
+      <section class="contact-page-section" id="contact-details" aria-label="Contact details">
+        <div class="contact-page-section__top">
+          <form class="contact-form" data-reveal="left" action="#" method="post">
+            <span class="contact-form__kicker">SEND US A MESSAGE</span>
+            <h2>Let's Plan Your <span>Signature Space.</span></h2>
+            <p class="contact-form__intro">
+              Share a few details and our design team will connect with you for a private consultation.
+            </p>
+            <div class="contact-form__grid">
+              <label>
+                <i class="fa-regular fa-user" aria-hidden="true"></i>
+                <input type="text" name="name" placeholder="Your Name*" />
+              </label>
+              <label>
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <input type="tel" name="phone" placeholder="Phone Number*" />
+              </label>
+              <label>
+                <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                <input type="email" name="email" placeholder="Email Address*" />
+              </label>
+              <label>
+                <i class="fa-regular fa-folder" aria-hidden="true"></i>
+                <input type="text" name="project" placeholder="Project Type*" />
+              </label>
+              <label class="contact-form__wide">
+                <i class="fa-solid fa-list" aria-hidden="true"></i>
+                <select name="service" aria-label="Select Service">
+                  <option>Select Service</option>
+                  <option>Interior Design</option>
+                  <option>Furniture Consultation</option>
+                  <option>Lighting & Decor</option>
+                  <option>Commercial Project</option>
+                </select>
+                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+              </label>
+              <label class="contact-form__wide contact-form__message">
+                <i class="fa-regular fa-pen-to-square" aria-hidden="true"></i>
+                <textarea name="message" placeholder="Write your message..."></textarea>
+              </label>
+            </div>
+            <button class="contact-form__submit" type="submit">
+              <span>SEND MESSAGE</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </form>
+
+          <aside class="contact-advisor" data-reveal="right" aria-label="Consultation details">
+            <div class="contact-advisor__header">
+              <span>PRIVATE DESIGN DESK</span>
+              <h2>Plan Your Visit.</h2>
+              <p>Speak with our team and begin your project with a focused, personal consultation.</p>
+            </div>
+            <article>
+              <span class="contact-advisor__icon"><i class="fa-solid fa-headphones"></i></span>
+              <div>
+                <h3>BOOK A CONSULTATION</h3>
+                <p>Schedule a one-on-one session with our experts.</p>
+                <a href="tel:+918799456223">SCHEDULE NOW <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </article>
+            <article>
+              <span class="contact-advisor__icon"><i class="fa-regular fa-clock"></i></span>
+              <div>
+                <h3>WORKING HOURS</h3>
+                <p>Monday - Saturday<br />11:00 AM - 7:00 PM</p>
+              </div>
+            </article>
+            <article>
+              <span class="contact-advisor__icon"><i class="fa-regular fa-calendar"></i></span>
+              <div>
+                <h3>WE MEET YOU</h3>
+                <p>At our office or at a location convenient for you.</p>
+              </div>
+            </article>
+          </aside>
+        </div>
+
+        <div class="contact-info-row" data-reveal="up">
+          <article>
+            <span><i class="fa-solid fa-location-dot"></i></span>
+            <h3>OUR OFFICE</h3>
+            <address>
+              Shivaay Luxury Living LLP, 318, Bisy Fortune,<br />
+              Opp. Ramkruti Club, Old SG Highway,<br />
+              Ahmedabad - 380061, Gujarat, India
+            </address>
+          </article>
+          <article>
+            <span><i class="fa-solid fa-phone"></i></span>
+            <h3>CALL US</h3>
+            <p><a href="tel:+917940113174">+91 79401 3174</a></p>
+            <p><a href="tel:+917941736996">+91 79417 36996</a></p>
+          </article>
+          <article>
+            <span><i class="fa-regular fa-envelope"></i></span>
+            <h3>EMAIL US</h3>
+            <p><a href="mailto:info@shivaayluxuryliving.com">info@shivaayluxuryliving.com</a></p>
+            <p><a href="mailto:hello@shivaayluxuryliving.com">hello@shivaayluxuryliving.com</a></p>
+          </article>
+          <article>
+            <span><i class="fa-regular fa-paper-plane"></i></span>
+            <h3>FOLLOW US</h3>
+            <div class="contact-info-row__socials">
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="contact-map" data-reveal="fade" aria-label="Location map">
+          <iframe
+            title="Shivaay Luxury Living location on Google Maps"
+            src="https://www.google.com/maps?q=Beside%20One%20West%20Complex%2C%20Samay%20Party%20Plot%2C%20Gotri%20Sevasi%20Canal%20Road%2C%20Vadodara%2C%20Gujarat%2C%20India&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
+
+      <section class="cta-banner" id="enquiry" aria-label="Book a consultation">
+        <div class="cta-banner__inner" data-reveal="fade">
+          <div class="cta-banner__copy">
+            <span class="cta-banner__kicker">BEGIN YOUR JOURNEY</span>
+            <h2>Ready to Transform <span>Your Space?</span></h2>
+            <p>Book a private consultation with our design experts today.</p>
+          </div>
+          <div class="cta-banner__actions">
+            <a class="cta-banner__btn cta-banner__btn--primary" href="#contact-details">
+              <span>Book a Consultation</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a class="cta-banner__btn cta-banner__btn--outline" href="tel:+918799456223">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              <span>+91-8799456223</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer" id="contact">
+        <div class="footer__main">
+          <div class="footer__brand-col">
+            <a class="footer__logo" href="../index.html" aria-label="Shivaay Luxury Living LLP">
+              <img src="../assets/home page/logo.png" alt="Shivaay Luxury Living LLP" />
+            </a>
+            <p class="footer__brand-desc">
+              Curated destination for luxury furniture, chandeliers, architectural surfaces, modular kitchens, designer
+              fans, appliances, planters, wall art and décor solutions for timeless interiors.
+            </p>
+            <div class="footer__socials">
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <nav class="footer__nav-col" aria-label="Quick links">
+            <h4>QUICK LINKS</h4>
+            <a href="../index.html"><i class="fa-solid fa-chevron-right"></i> Home</a>
+            <a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a>
+            <a href="collections.html"><i class="fa-solid fa-chevron-right"></i> Collections</a>
+            <a href="gallery.html"><i class="fa-solid fa-chevron-right"></i> Gallery</a>
+            <a href="brands.html"><i class="fa-solid fa-chevron-right"></i> Our Brands</a>
+            <a href="../index.html#services"><i class="fa-solid fa-chevron-right"></i> For Designers</a>
+            <a href="../index.html#listings"><i class="fa-solid fa-chevron-right"></i> Projects</a>
+            <a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us</a>
+          </nav>
+
+          <nav class="footer__nav-col" aria-label="Collections">
+            <h4>COLLECTIONS</h4>
+            <a href="collections.html#collections"><i class="fa-solid fa-chevron-right"></i> Chandeliers</a>
+            <a href="collections.html#collections"><i class="fa-solid fa-chevron-right"></i> Furniture</a>
+            <a href="collections.html#collections"><i class="fa-solid fa-chevron-right"></i> Texture Paints</a>
+            <a href="collections.html#collections"><i class="fa-solid fa-chevron-right"></i> Modular Kitchen</a>
+            <a href="collections.html#collections"><i class="fa-solid fa-chevron-right"></i> Kitchen Appliances</a>
+            <a href="collections.html#collections"><i class="fa-solid fa-chevron-right"></i> Designer Air Circulators</a>
+            <a href="collections.html#collections"><i class="fa-solid fa-chevron-right"></i> 3D Cladding</a>
+            <a href="collections.html#collections"><i class="fa-solid fa-chevron-right"></i> Artifacts</a>
+            <a href="collections.html#collections"><i class="fa-solid fa-chevron-right"></i> Planters</a>
+            <a href="collections.html#collections"><i class="fa-solid fa-chevron-right"></i> Wall Arts</a>
+          </nav>
+
+          <div class="footer__contact-col">
+            <h4>CONTACT</h4>
+            <div class="footer__contact-item">
+              <span class="footer__contact-icon"><i class="fa-solid fa-location-dot"></i></span>
+              <address>
+                Beside One West Complex,<br />
+                Samay Party Plot,<br />
+                Gotri Sevasi - Canal Road,<br />
+                Vadodara 391101, Gujarat, India
+              </address>
+            </div>
+            <div class="footer__contact-item">
+              <span class="footer__contact-icon"><i class="fa-solid fa-phone"></i></span>
+              <a href="tel:+918799456223">+91-8799456223</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__watermark-row">
+          <img class="footer__watermark-img footer__watermark-img--left" src="../assets/05_accent_chair_corner.png" alt=""
+            aria-hidden="true" />
+          <span class="footer__watermark-text" aria-hidden="true">SHIVAAY</span>
+          <img class="footer__watermark-img footer__watermark-img--right" src="../assets/08_crystal_chandelier.png" alt=""
+            aria-hidden="true" />
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__bottom-ornament" aria-hidden="true">
+            <i class="fa-solid fa-diamond"></i>
+          </div>
+          <div class="footer__bottom-links">
+            <span>© 2026 Shivaay Luxury Living LLP. All Rights Reserved.</span>
+            <span class="footer__bottom-sep">|</span>
+            <a href="#">Privacy Policy</a>
+            <span class="footer__bottom-sep">|</span>
+            <a href="#">Terms &amp; Conditions</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <div class="enquiry-popup" id="enquiry-popup" aria-hidden="true">
+    <button class="enquiry-popup__backdrop" type="button" data-enquiry-close aria-label="Close enquiry form"></button>
+    <div class="enquiry-popup__dialog" role="dialog" aria-modal="true" aria-labelledby="enquiry-popup-title">
+      <aside class="enquiry-popup__panel">
+        <span class="enquiry-popup__mark"><i class="fa-solid fa-compass-drafting"></i></span>
+        <img src="../assets/hero-luxury-interior.png" alt="Luxury interior designed by Shivaay" />
+        <span class="enquiry-popup__kicker">TRUSTED PARTNER IN</span>
+        <h2>Luxury Interiors · Curated Living · Design Consultation</h2>
+        <div class="enquiry-popup__info">
+          <span><i class="fa-solid fa-phone"></i></span>
+          <div><b>CALL US</b><a href="tel:+91794013174">+91 79401 3174</a><a href="tel:+917941736996">+91 79417 36996</a></div>
+        </div>
+        <div class="enquiry-popup__info">
+          <span><i class="fa-regular fa-envelope"></i></span>
+          <div><b>EMAIL US</b><a href="mailto:info@shivaayluxuryliving.com">info@shivaayluxuryliving.com</a><a href="mailto:hello@shivaayluxuryliving.com">hello@shivaayluxuryliving.com</a></div>
+        </div>
+        <div class="enquiry-popup__info">
+          <span><i class="fa-solid fa-location-dot"></i></span>
+          <div><b>OUR OFFICE</b><p>Shivaay Luxury Living LLP, 318, Bisy Fortune, Opp. Ramkruti Club, Old SG Highway, Ahmedabad - 380061, Gujarat, India</p></div>
+        </div>
+      </aside>
+
+      <form class="enquiry-popup__form" action="#" method="post">
+        <button class="enquiry-popup__close" type="button" data-enquiry-close aria-label="Close enquiry form">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h2 id="enquiry-popup-title">Get in Touch</h2>
+        <p>Send us your requirement and our team will get back to you shortly.</p>
+        <div class="enquiry-popup__grid">
+          <label><i class="fa-regular fa-user"></i><input type="text" name="name" placeholder="Full Name" required /></label>
+          <label><i class="fa-regular fa-envelope"></i><input type="email" name="email" placeholder="Email Address" required /></label>
+          <label><i class="fa-solid fa-phone"></i><input type="tel" name="phone" placeholder="Phone Number" required /></label>
+          <label><i class="fa-regular fa-building"></i><input type="text" name="company" placeholder="Company Name" /></label>
+          <label class="enquiry-popup__wide"><i class="fa-regular fa-gem"></i><select name="brand" required><option value="">Select Brand</option><option>Floorings &amp; Tiles</option><option>Kitchens</option><option>Appliances</option><option>Designer Fans</option><option>Natural Wood Product</option><option>Lightings</option><option>Designer Stone Surfaces</option></select><i class="fa-solid fa-chevron-down"></i></label>
+          <label class="enquiry-popup__wide"><i class="fa-regular fa-clipboard"></i><input type="text" name="subject" placeholder="Subject" /></label>
+          <label class="enquiry-popup__wide enquiry-popup__message"><i class="fa-regular fa-pen-to-square"></i><textarea name="message" placeholder="Message"></textarea></label>
+        </div>
+        <button class="enquiry-popup__submit" type="submit">Send Enquiry <i class="fa-solid fa-arrow-right"></i></button>
+        <small><i class="fa-regular fa-shield"></i> We'll respond within 24 hours</small>
+      </form>
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>
