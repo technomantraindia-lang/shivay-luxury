@@ -2453,8 +2453,9 @@ p {
 .collections__header h2 {
   margin-top: 10px;
   color: #2f241d;
-  font-size: clamp(46px, 4.4vw, 76px);
+  font-size: clamp(50px, 5vw, 88px);
   line-height: 1;
+  white-space: nowrap;
 }
 
 .collections__header h2 span {
@@ -2554,7 +2555,7 @@ p {
 }
 
 .inspire-gallery__header {
-  max-width: 780px;
+  max-width: 980px;
   margin: 0 auto 48px;
   text-align: center;
 }
@@ -2760,6 +2761,7 @@ p {
   font-size: clamp(44px, 4.8vw, 84px);
   font-weight: 400;
   line-height: 0.98;
+  white-space: nowrap;
 }
 
 .gallery-showcase__header em {
@@ -4211,7 +4213,7 @@ p {
   }
 
   .collections__header h2 {
-    font-size: clamp(36px, 11vw, 50px);
+    font-size: clamp(34px, 10vw, 56px);
   }
 
   .collections__header p {
@@ -4253,7 +4255,7 @@ p {
   }
 
   .inspire-gallery__header h2 {
-    font-size: clamp(24px, 6.6vw, 48px);
+    font-size: clamp(22px, 6vw, 48px);
   }
 
   .inspire-gallery__header p {
@@ -4274,7 +4276,7 @@ p {
   }
 
   .gallery-showcase__header h2 {
-    font-size: clamp(30px, 8vw, 48px);
+    font-size: clamp(24px, 6.6vw, 48px);
   }
 
   .gallery-showcase__header p {
@@ -9181,7 +9183,7 @@ body.sidebar-active {
   margin-inline: auto;
 }
 
-/* â”€â”€ Grid: 3 top + 4 bottom â”€â”€ */
+/* â”€â”€ Grid: 4 top + 4 bottom â”€â”€ */
 .pb__grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -9189,17 +9191,9 @@ body.sidebar-active {
   width: 100%;
 }
 
-.pb__grid .pb__card:nth-child(-n+3) {
-  grid-column: span 4;
-}
-
-.pb__grid .pb__card:nth-child(n+4) {
+.pb__grid .pb__card {
   grid-column: span 3;
 }
-
-/* Top row â€” 3 cards span 4/3 each */
-
-/* Bottom row â€” 4 cards, one per column */
 
 /* â”€â”€ Individual card â”€â”€ */
 .pb__card {
@@ -9239,6 +9233,16 @@ body.sidebar-active {
   transform: scale(1.07);
 }
 
+.pb__card--arisyo .pb__card-bg {
+  padding: 28px 34px 72px;
+  object-fit: contain;
+  background: #070604;
+}
+
+.pb__card--arisyo:hover .pb__card-bg {
+  transform: scale(1.02);
+}
+
 .brands-page .pb--page .pb__card {
   height: clamp(300px, 28vw, 380px);
   border-radius: 8px;
@@ -9266,6 +9270,11 @@ body.sidebar-active {
 
 .brands-page .pb--page .pb__card:hover .pb__card-bg {
   transform: translateY(-4px) scale(1.015);
+}
+
+.brands-page .pb--page .pb__card--arisyo .pb__card-bg {
+  padding: 34px 34px 18px;
+  object-fit: contain;
 }
 
 .brands-page .pb--page .pb__card-num {
@@ -9640,12 +9649,8 @@ body.sidebar-active {
     gap: 14px;
   }
 
-  .pb__grid .pb__card:nth-child(-n+3) {
+  .pb__grid .pb__card:nth-child(-n+8) {
     grid-column: span 2;
-  }
-
-  .pb__grid .pb__card:nth-child(n+4) {
-    grid-column: span 3;
   }
 
   .pb__card {
@@ -9675,7 +9680,7 @@ body.sidebar-active {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .pb__grid .pb__card:nth-child(-n+7) {
+  .pb__grid .pb__card:nth-child(-n+8) {
     grid-column: span 1;
   }
 
@@ -9710,7 +9715,7 @@ body.sidebar-active {
     gap: 12px;
   }
 
-  .pb__grid .pb__card:nth-child(-n+7) {
+  .pb__grid .pb__card:nth-child(-n+8) {
     grid-column: span 1;
   }
 
@@ -9727,6 +9732,14 @@ body.sidebar-active {
     width: calc(100% - 16px);
     height: calc(100% - 84px);
     padding: 0;
+  }
+
+  .pb__card--arisyo .pb__card-bg {
+    padding: 22px 28px 70px;
+  }
+
+  .brands-page .pb--page .pb__card--arisyo .pb__card-bg {
+    padding: 24px 26px 16px;
   }
 
   .brands-page .pb--page .pb__card-overlay {

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" role="img" aria-labelledby="title desc">
+  <title id="title">Arisyo</title>
+  <desc id="desc">White Arisyo brand wordmark on a dark luxury background.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17100a"/>
+      <stop offset="0.48" stop-color="#050403"/>
+      <stop offset="1" stop-color="#241608"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="18%" r="70%">
+      <stop offset="0" stop-color="#c49a52" stop-opacity="0.36"/>
+      <stop offset="0.46" stop-color="#c49a52" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#c49a52" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="620" rx="44" fill="url(#bg)"/>
+  <rect width="1600" height="620" rx="44" fill="url(#glow)"/>
+  <g fill="none" stroke="#f8f6f1" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" opacity="0.95" transform="translate(78 166)">
+    <path d="M0 46h204"/>
+    <path d="M103 46c78 48 104 116 104 222"/>
+    <path d="M103 46c-78 48-104 116-104 222"/>
+    <path d="M38 178c48-36 98-54 149-54"/>
+  </g>
+  <text x="285" y="385"
+        fill="#f8f6f1"
+        font-family="Arial Rounded MT Bold, Avenir Next, Montserrat, Arial, sans-serif"
+        font-size="292"
+        font-weight="800"
+        letter-spacing="-10">.arisyo</text>
+  <circle cx="785" cy="94" r="34" fill="#f8f6f1"/>
+  <path d="M86 540h1428" stroke="#c49a52" stroke-opacity="0.42" stroke-width="2"/>
+</svg>
