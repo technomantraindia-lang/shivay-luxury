@@ -9233,13 +9233,13 @@ body.sidebar-active {
   transform: scale(1.07);
 }
 
-.pb__card--arisyo .pb__card-bg {
+.pb__card--ARISYA .pb__card-bg {
   padding: 28px 34px 72px;
   object-fit: contain;
-  background: #070604;
+  background: #b9874d;
 }
 
-.pb__card--arisyo:hover .pb__card-bg {
+.pb__card--ARISYA:hover .pb__card-bg {
   transform: scale(1.02);
 }
 
@@ -9272,9 +9272,10 @@ body.sidebar-active {
   transform: translateY(-4px) scale(1.015);
 }
 
-.brands-page .pb--page .pb__card--arisyo .pb__card-bg {
+.brands-page .pb--page .pb__card--ARISYA .pb__card-bg {
   padding: 34px 34px 18px;
   object-fit: contain;
+  background: #b9874d;
 }
 
 .brands-page .pb--page .pb__card-num {
@@ -9734,11 +9735,11 @@ body.sidebar-active {
     padding: 0;
   }
 
-  .pb__card--arisyo .pb__card-bg {
+  .pb__card--ARISYA .pb__card-bg {
     padding: 22px 28px 70px;
   }
 
-  .brands-page .pb--page .pb__card--arisyo .pb__card-bg {
+  .brands-page .pb--page .pb__card--ARISYA .pb__card-bg {
     padding: 24px 26px 16px;
   }
 
