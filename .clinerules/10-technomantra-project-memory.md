@@ -5,8 +5,8 @@
 - Workspace: slviay
 - Technology: HTML/CSS/JavaScript
 - Active file at refresh: None
-- Local code graph: 18 files · 18 edges · 0 matched flows
-- Refreshed: 2026-09-03T08:49:19.737Z
+- Local code graph: 17 files · 17 edges · 0 matched flows
+- Refreshed: 2026-09-03T11:53:57.828Z
 
 ## Framework Intelligence (V4.7.8)
 - Profiles: html-static
@@ -27,7 +27,6 @@
 - pages/COLLECTIONS/outdoor-furniture.html
 - pages/COLLECTIONS/planters.html
 - pages/COLLECTIONS/sculptural-art-decor.html
-- pages/COLLECTIONS/texture-paints.html
 - pages/COLLECTIONS/wall-arts.html
 - pages/contact.html
 - pages/gallery.html
@@ -52,7 +51,6 @@
 - pages/COLLECTIONS/outdoor-furniture.html
 - pages/COLLECTIONS/planters.html
 - pages/COLLECTIONS/sculptural-art-decor.html
-- pages/COLLECTIONS/texture-paints.html
 - pages/COLLECTIONS/wall-arts.html
 - pages/contact.html
 - pages/gallery.html
@@ -69,4 +67,5 @@
 - .clinerules/14-technomantra-adaptive-cost-optimizer.md
 - .clinerules/15-technomantra-fast-coding-engine.md
 - .clinerules/90-technomantra-selected-agent.md
+- .vscode/settings.json
 - script.js
