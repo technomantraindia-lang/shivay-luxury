@@ -545,4 +545,88 @@ function initStoryImageReveal() {
 
 initStoryImageReveal();
 
+function initCollectionGalleryLightbox() {
+  const images = document.querySelectorAll(".collection-gallery-showcase__item img");
+  if (!images.length) return;
+
+  const lightbox = document.createElement("div");
+  lightbox.className = "gallery-lightbox";
+  lightbox.setAttribute("aria-hidden", "true");
+  lightbox.innerHTML = `
+    <button class="gallery-lightbox__backdrop" type="button" aria-label="Close image preview"></button>
+    <button class="gallery-lightbox__nav gallery-lightbox__nav--prev" type="button" aria-label="Previous gallery image">
+      <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+    </button>
+    <button class="gallery-lightbox__nav gallery-lightbox__nav--next" type="button" aria-label="Next gallery image">
+      <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+    </button>
+    <button class="gallery-lightbox__close" type="button" aria-label="Close image preview">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+    <figure class="gallery-lightbox__figure">
+      <img class="gallery-lightbox__image" alt="" />
+      <figcaption class="gallery-lightbox__caption"></figcaption>
+    </figure>
+  `;
+  document.body.appendChild(lightbox);
+
+  const preview = lightbox.querySelector(".gallery-lightbox__image");
+  const caption = lightbox.querySelector(".gallery-lightbox__caption");
+  const closeButton = lightbox.querySelector(".gallery-lightbox__close");
+  const previousButton = lightbox.querySelector(".gallery-lightbox__nav--prev");
+  const nextButton = lightbox.querySelector(".gallery-lightbox__nav--next");
+  let previousFocus = null;
+  let currentIndex = 0;
+
+  function closeLightbox() {
+    lightbox.classList.remove("is-open");
+    lightbox.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("gallery-lightbox-active");
+    if (previousFocus) previousFocus.focus();
+  }
+
+  function showImage(index) {
+    currentIndex = (index + images.length) % images.length;
+    const image = images[currentIndex];
+    preview.src = image.currentSrc || image.src;
+    preview.alt = image.alt;
+    caption.textContent = image.closest("figure")?.querySelector("figcaption")?.textContent || "";
+  }
+
+  function openLightbox(image) {
+    previousFocus = document.activeElement;
+    showImage(Array.from(images).indexOf(image));
+    lightbox.classList.add("is-open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.classList.add("gallery-lightbox-active");
+    closeButton.focus();
+  }
+
+  images.forEach((image) => {
+    const item = image.closest(".collection-gallery-showcase__item");
+    if (item) item.addEventListener("click", () => openLightbox(image));
+    image.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openLightbox(image);
+      }
+    });
+    image.tabIndex = 0;
+    image.setAttribute("role", "button");
+    image.setAttribute("aria-label", `Open ${image.alt || "gallery image"} in large view`);
+  });
+
+  closeButton.addEventListener("click", closeLightbox);
+  previousButton.addEventListener("click", () => showImage(currentIndex - 1));
+  nextButton.addEventListener("click", () => showImage(currentIndex + 1));
+  lightbox.querySelector(".gallery-lightbox__backdrop").addEventListener("click", closeLightbox);
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && lightbox.classList.contains("is-open")) closeLightbox();
+    if (event.key === "ArrowLeft" && lightbox.classList.contains("is-open")) showImage(currentIndex - 1);
+    if (event.key === "ArrowRight" && lightbox.classList.contains("is-open")) showImage(currentIndex + 1);
+  });
+}
+
+initCollectionGalleryLightbox();
+
 // ─── END STORY IMAGE REVEAL ──────────────────────────────────────────────────
