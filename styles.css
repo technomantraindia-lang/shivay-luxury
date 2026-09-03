@@ -4435,16 +4435,16 @@ p {
   line-height: 0.98;
 }
 
-.inspire-gallery__header h2 span {
+.inspire-gallery__header h2 > span {
   display: block;
 }
 
-.inspire-gallery__header h2 span:first-child {
+.inspire-gallery__header h2 > span:first-child {
   color: #2f241d;
   white-space: nowrap;
 }
 
-.inspire-gallery__header h2 span:last-child {
+.inspire-gallery__header h2 > span:last-child {
   color: #9e7846;
 }
 
@@ -4592,7 +4592,7 @@ p {
   text-align: center;
 }
 
-.gallery-showcase__header span {
+.gallery-showcase__header > span {
   display: inline-flex;
   align-items: center;
   gap: 12px;
@@ -4603,8 +4603,8 @@ p {
   text-transform: uppercase;
 }
 
-.gallery-showcase__header span::before,
-.gallery-showcase__header span::after {
+.gallery-showcase__header > span::before,
+.gallery-showcase__header > span::after {
   width: 34px;
   height: 1px;
   background: currentColor;
@@ -4643,22 +4643,14 @@ p {
 
 .gallery-card {
   position: relative;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   break-inside: avoid;
-  margin: 0 0 18px;
-  border: 1px solid rgba(178, 131, 73, 0.28);
-  border-radius: 8px;
-  background:
-    linear-gradient(180deg, rgba(255, 253, 248, 0.96), rgba(243, 232, 217, 0.95)),
-    #fffaf2;
-  box-shadow:
-    0 16px 36px rgba(69, 52, 35, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.82);
-  transition: transform 360ms cubic-bezier(0.2, 0.8, 0.2, 1),
-              box-shadow 360ms ease,
-              border-color 360ms ease;
+  margin: 0 0 32px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  transition: transform 500ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .gallery-page .gallery-card[data-reveal] {
@@ -4699,7 +4691,9 @@ p {
   min-height: 0;
   flex: none;
   object-fit: cover;
-  transition: transform 620ms cubic-bezier(0.2, 0.8, 0.2, 1), filter 620ms ease;
+  border-radius: 4px;
+  box-shadow: 0 12px 32px rgba(47, 36, 29, 0.08);
+  transition: transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 700ms ease, filter 700ms ease;
 }
 
 .gallery-card--large img {
@@ -4716,41 +4710,40 @@ p {
 
 .gallery-card:hover img {
   filter: saturate(1.04) contrast(1.02);
-  transform: scale(1.035);
+  transform: scale(1.02);
+  box-shadow: 0 20px 48px rgba(47, 36, 29, 0.15);
 }
 
 .gallery-card:hover {
-  border-color: rgba(178, 131, 73, 0.62);
-  box-shadow: 0 24px 52px rgba(69, 52, 35, 0.18);
-  transform: translateY(-7px);
+  transform: translateY(-6px);
 }
 
 .gallery-card div {
   position: relative;
   flex: 0 0 auto;
-  min-height: 112px;
-  padding: 20px 22px 22px;
-  border-top: 1px solid rgba(178, 131, 73, 0.2);
-  color: #3c2b1c;
+  min-height: auto;
+  padding: 16px 4px 0 4px;
+  border-top: none;
+  color: #2f241d;
 }
 
 .gallery-card span {
   display: block;
-  margin-bottom: 9px;
-  color: #a87436;
+  margin-bottom: 6px;
+  color: #9e7846;
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
 }
 
 .gallery-card h3 {
-  max-width: 420px;
+  max-width: 100%;
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(19px, 1.55vw, 28px);
+  font-size: clamp(19px, 1.55vw, 26px);
   font-weight: 400;
-  line-height: 1.16;
+  line-height: 1.25;
 }
 
 /* --- CTA BANNER ------------------------------------------------------------- */
@@ -12820,7 +12813,7 @@ body.enquiry-popup-active {
   text-align: center;
 }
 
-.collection-gallery-showcase__header span {
+.collection-gallery-showcase__header > span {
   display: inline-flex;
   align-items: center;
   gap: 14px;
@@ -12831,7 +12824,7 @@ body.enquiry-popup-active {
   text-transform: uppercase;
 }
 
-.collection-gallery-showcase__header span::before {
+.collection-gallery-showcase__header > span::before {
   content: "";
   width: clamp(38px, 5vw, 70px);
   height: 1px;
@@ -12839,7 +12832,7 @@ body.enquiry-popup-active {
   opacity: 0.55;
 }
 
-.collection-gallery-showcase__header span::after {
+.collection-gallery-showcase__header > span::after {
   display: none;
 }
 
