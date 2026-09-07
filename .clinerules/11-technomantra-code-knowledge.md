@@ -5,7 +5,7 @@
 - Indexed source files: 18
 - Structural edges: 18
 - Matched end-to-end flows: 0
-- Updated: 2026-09-07T07:53:18.174Z
+- Updated: 2026-09-07T08:47:44.904Z
 
 ## Dependency edges
 - IMPORT index.html -> styles.css, script.js
@@ -43,7 +43,7 @@
 - UI pages/COLLECTIONS/designer-fans-kitchen-appliances.html: #loader, #loader-content, #page-wrapper, #sidebar-overlay, #sidebar, #sidebar-close, #designer-fans-kitchen-appliances, #enquiry, #contact, #enquiry-popup, #enquiry-popup-title, .about-page, .collection-page, .chandelier-page
 - UI pages/COLLECTIONS/furniture.html: #loader, #loader-content, #page-wrapper, #sidebar-overlay, #sidebar, #sidebar-close, #furniture, #enquiry, #contact, #enquiry-popup, #enquiry-popup-title, .about-page, .collection-page, .chandelier-page
 - UI pages/COLLECTIONS/modular-kitchen.html: #loader, #loader-content, #page-wrapper, #sidebar-overlay, #sidebar, #sidebar-close, #modular-kitchen, #enquiry, #contact, #enquiry-popup, #enquiry-popup-title, .about-page, .collection-page, .chandelier-page
-- UI pages/COLLECTIONS/outdoor-furniture.html: #loader, #loader-content, #page-wrapper, #sidebar-overlay, #sidebar, #sidebar-close, #outdoor-furniture, #enquiry, #contact, #enquiry-popup, #enquiry-popup-title, .about-page, .collection-page, .outdoor-furniture-page
+- UI pages/COLLECTIONS/outdoor-furniture.html: #loader, #loader-content, #page-wrapper, #sidebar-overlay, #sidebar, #sidebar-close, #outdoor-furniture, #enquiry, #contact, #enquiry-popup, #enquiry-popup-title, .about-page, .collection-page, .chandelier-page
 - UI pages/COLLECTIONS/planters.html: #loader, #loader-content, #page-wrapper, #sidebar-overlay, #sidebar, #sidebar-close, #planters, #enquiry, #contact, #enquiry-popup, #enquiry-popup-title, .about-page, .collection-page, .chandelier-page
 - UI pages/COLLECTIONS/sculptural-art-decor.html: #loader, #loader-content, #page-wrapper, #sidebar-overlay, #sidebar, #sidebar-close, #sculptural-art-decor, #enquiry, #contact, #enquiry-popup, #enquiry-popup-title, .about-page, .collection-page, .chandelier-page
 - UI pages/COLLECTIONS/texture-paints.html: #loader, #loader-content, #page-wrapper, #sidebar-overlay, #sidebar, #sidebar-close, #texture-paints, #enquiry, #contact, #enquiry-popup, #enquiry-popup-title, .about-page, .collection-page, .chandelier-page
