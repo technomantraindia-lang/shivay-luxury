@@ -543,7 +543,7 @@ function initStoryImageReveal() {
 initStoryImageReveal();
 
 function initCollectionGalleryLightbox() {
-  const images = document.querySelectorAll(".collection-gallery-showcase__item img");
+  const images = document.querySelectorAll(".collection-gallery-showcase__item img, .gallery-card img");
   if (!images.length) return;
 
   const lightbox = document.createElement("div");
@@ -586,8 +586,19 @@ function initCollectionGalleryLightbox() {
     currentIndex = (index + images.length) % images.length;
     const image = images[currentIndex];
     preview.src = image.currentSrc || image.src;
-    preview.alt = image.alt;
-    caption.textContent = image.closest("figure")?.querySelector("figcaption")?.textContent || "";
+    preview.alt = image.alt || "Shivaay luxury gallery image";
+
+    const galleryCard = image.closest(".gallery-card");
+    const figure = image.closest("figure");
+    if (galleryCard) {
+      const category = galleryCard.querySelector("span")?.textContent?.trim() || "";
+      const title = galleryCard.querySelector("h3")?.textContent?.trim() || "";
+      caption.textContent = category && title ? `${category} — ${title}` : (title || category || image.alt || "");
+    } else if (figure) {
+      caption.textContent = figure.querySelector("figcaption")?.textContent?.trim() || image.alt || "";
+    } else {
+      caption.textContent = image.alt || "";
+    }
   }
 
   function openLightbox(image) {
@@ -600,8 +611,11 @@ function initCollectionGalleryLightbox() {
   }
 
   images.forEach((image) => {
-    const item = image.closest(".collection-gallery-showcase__item");
-    if (item) item.addEventListener("click", () => openLightbox(image));
+    const item = image.closest(".collection-gallery-showcase__item, .gallery-card");
+    if (item) {
+      item.style.cursor = "pointer";
+      item.addEventListener("click", () => openLightbox(image));
+    }
     image.addEventListener("keydown", (event) => {
       if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();

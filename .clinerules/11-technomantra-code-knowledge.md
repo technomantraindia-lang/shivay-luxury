@@ -2,10 +2,10 @@
 
 > Structural local index. Read current source before editing. Secrets are intentionally excluded.
 
-- Indexed source files: 17
-- Structural edges: 17
+- Indexed source files: 18
+- Structural edges: 18
 - Matched end-to-end flows: 0
-- Updated: 2026-09-03T11:53:57.822Z
+- Updated: 2026-09-07T07:53:18.174Z
 
 ## Dependency edges
 - IMPORT index.html -> styles.css, script.js
@@ -21,6 +21,7 @@
 - IMPORT pages/COLLECTIONS/outdoor-furniture.html -> styles.css, script.js
 - IMPORT pages/COLLECTIONS/planters.html -> styles.css, script.js
 - IMPORT pages/COLLECTIONS/sculptural-art-decor.html -> styles.css, script.js
+- IMPORT pages/COLLECTIONS/texture-paints.html -> styles.css, script.js
 - IMPORT pages/COLLECTIONS/wall-arts.html -> styles.css, script.js
 - IMPORT pages/contact.html -> styles.css, script.js
 - IMPORT pages/gallery.html -> styles.css, script.js
@@ -42,9 +43,10 @@
 - UI pages/COLLECTIONS/designer-fans-kitchen-appliances.html: #loader, #loader-content, #page-wrapper, #sidebar-overlay, #sidebar, #sidebar-close, #designer-fans-kitchen-appliances, #enquiry, #contact, #enquiry-popup, #enquiry-popup-title, .about-page, .collection-page, .chandelier-page
 - UI pages/COLLECTIONS/furniture.html: #loader, #loader-content, #page-wrapper, #sidebar-overlay, #sidebar, #sidebar-close, #furniture, #enquiry, #contact, #enquiry-popup, #enquiry-popup-title, .about-page, .collection-page, .chandelier-page
 - UI pages/COLLECTIONS/modular-kitchen.html: #loader, #loader-content, #page-wrapper, #sidebar-overlay, #sidebar, #sidebar-close, #modular-kitchen, #enquiry, #contact, #enquiry-popup, #enquiry-popup-title, .about-page, .collection-page, .chandelier-page
-- UI pages/COLLECTIONS/outdoor-furniture.html: #loader, #loader-content, #page-wrapper, #sidebar-overlay, #sidebar, #sidebar-close, #outdoor-furniture, #enquiry, #contact, #enquiry-popup, #enquiry-popup-title, .about-page, .collection-page, .chandelier-page
+- UI pages/COLLECTIONS/outdoor-furniture.html: #loader, #loader-content, #page-wrapper, #sidebar-overlay, #sidebar, #sidebar-close, #outdoor-furniture, #enquiry, #contact, #enquiry-popup, #enquiry-popup-title, .about-page, .collection-page, .outdoor-furniture-page
 - UI pages/COLLECTIONS/planters.html: #loader, #loader-content, #page-wrapper, #sidebar-overlay, #sidebar, #sidebar-close, #planters, #enquiry, #contact, #enquiry-popup, #enquiry-popup-title, .about-page, .collection-page, .chandelier-page
 - UI pages/COLLECTIONS/sculptural-art-decor.html: #loader, #loader-content, #page-wrapper, #sidebar-overlay, #sidebar, #sidebar-close, #sculptural-art-decor, #enquiry, #contact, #enquiry-popup, #enquiry-popup-title, .about-page, .collection-page, .chandelier-page
+- UI pages/COLLECTIONS/texture-paints.html: #loader, #loader-content, #page-wrapper, #sidebar-overlay, #sidebar, #sidebar-close, #texture-paints, #enquiry, #contact, #enquiry-popup, #enquiry-popup-title, .about-page, .collection-page, .chandelier-page
 - UI pages/COLLECTIONS/wall-arts.html: #loader, #loader-content, #page-wrapper, #sidebar-overlay, #sidebar, #sidebar-close, #wall-arts, #enquiry, #contact, #enquiry-popup, #enquiry-popup-title, .about-page, .collection-page, .chandelier-page
 - UI pages/contact.html: #loader, #loader-content, #page-wrapper, #sidebar-overlay, #sidebar, #sidebar-close, #contact-details, #enquiry, #contact, #enquiry-popup, #enquiry-popup-title, .about-page, .contact-page, .loader
 - UI pages/gallery.html: #loader, #loader-content, #page-wrapper, #sidebar-overlay, #sidebar, #sidebar-close, #gallery, #enquiry, #contact, #enquiry-popup, #enquiry-popup-title, .about-page, .gallery-page, .loader

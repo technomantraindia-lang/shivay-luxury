@@ -2,11 +2,11 @@
 
 > This is a persistent locator map, not a claim that file contents are current. Read each target only once per task and rely on normal invalidation after edits.
 
-- Workspace: slviay
+- Workspace: shivay-luxury-master
 - Technology: HTML/CSS/JavaScript
 - Active file at refresh: None
-- Local code graph: 17 files · 17 edges · 0 matched flows
-- Refreshed: 2026-09-03T11:53:57.828Z
+- Local code graph: 18 files · 18 edges · 0 matched flows
+- Refreshed: 2026-09-07T07:53:18.185Z
 
 ## Framework Intelligence (V4.7.8)
 - Profiles: html-static
@@ -27,6 +27,7 @@
 - pages/COLLECTIONS/outdoor-furniture.html
 - pages/COLLECTIONS/planters.html
 - pages/COLLECTIONS/sculptural-art-decor.html
+- pages/COLLECTIONS/texture-paints.html
 - pages/COLLECTIONS/wall-arts.html
 - pages/contact.html
 - pages/gallery.html
@@ -51,6 +52,7 @@
 - pages/COLLECTIONS/outdoor-furniture.html
 - pages/COLLECTIONS/planters.html
 - pages/COLLECTIONS/sculptural-art-decor.html
+- pages/COLLECTIONS/texture-paints.html
 - pages/COLLECTIONS/wall-arts.html
 - pages/contact.html
 - pages/gallery.html

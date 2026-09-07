@@ -13,15 +13,15 @@ This workspace uses task capsules so developers can run parallel development wit
 ## Active capsule snapshot
 The extension refreshes this file automatically. Prefer its concise state over old chat history when resuming.
 
-- Capsule ID: tm-cap-aaa99927c28fdbfdd08c6847
+- Capsule ID: tm-cap-7f805852bda3c29a43ad8a36
 - Isolation: task-capsule-v411
-- Workspace ID: tm-ws-76741b9c79839fa2af6f98b6
-- Window ID: tm-win-6e4e564228b5aa3fb6d625bf
-- Project: slviay
+- Workspace ID: tm-ws-162d7403d3da25ee55fd68b3
+- Window ID: tm-win-4f54308e6c3031789b52d161
+- Project: shivay-luxury-master
 - Framework: html-static
 - Developer mode: smart
 - Model mode: eco
-- Active file: pages/COLLECTIONS/3d-wall-stone-cladding.html
+- Active file: none
 - Objective: Current developer prompt in this workspace/window only.
 - Blocker: none
 - Next action: Inspect current prompt and workspace evidence before editing.
@@ -29,7 +29,6 @@ The extension refreshes this file automatically. Prefer its concise state over o
 ## Touched files in this capsule
 
 ## Recent files in this workspace/window
-- pages/COLLECTIONS/3d-wall-stone-cladding.html
 
 ## Hard rule
 If a file, goal, screenshot, terminal output, or decision is not connected to this capsule, do not use it for the current task.
