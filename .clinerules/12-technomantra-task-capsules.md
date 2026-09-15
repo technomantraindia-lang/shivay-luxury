@@ -18,7 +18,7 @@ The extension refreshes this file automatically. Prefer its concise state over o
 - Workspace ID: tm-ws-76741b9c79839fa2af6f98b6
 - Window ID: tm-win-6e4e564228b5aa3fb6d625bf
 - Project: slviay
-- Framework: html-static
+- Framework: 
 - Developer mode: smart
 - Model mode: eco
 - Active file: pages/COLLECTIONS/3d-wall-stone-cladding.html
